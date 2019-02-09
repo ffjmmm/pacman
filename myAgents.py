@@ -150,13 +150,13 @@ class AnyFoodSearchProblem(PositionSearchProblem):
             return 50
 
         if action == Directions.NORTH:
-            return len([agent for agent in self.agents if agent[1] > y and abs(agent[0] - x) <= self.width // 2]) + 1
-        elif action == Directions.SOUTH:
-            return len([agent for agent in self.agents if agent[1] < y and abs(agent[0] - x) <= self.width // 2]) + 1
+            return len([agent for agent in self.agents if agent[1] > y and abs(agent[0] - x) <= self.width // 5]) + 1
+	elif action == Directions.SOUTH:
+            return len([agent for agent in self.agents if agent[1] < y and abs(agent[0] - x) <= self.width // 5]) + 1
         elif action == Directions.WEST:
-            return len([agent for agent in self.agents if agent[0] < x and abs(agent[1] - y) <= self.height // 2]) + 1
+            return len([agent for agent in self.agents if agent[0] < x and abs(agent[1] - y) <= self.height // 5]) + 1
         elif action == Directions.EAST:
-            return len([agent for agent in self.agents if agent[0] > x and abs(agent[1] - y) <= self.height // 2]) + 1
+            return len([agent for agent in self.agents if agent[0] > x and abs(agent[1] - y) <= self.height // 5]) + 1
         '''
         if action == Directions.NORTH:
             return len([agent for agent in self.agents if agent[1] > y]) + 1
@@ -191,5 +191,5 @@ def uniformCostSearch(problem):
                 p_queue.push((successor[0], current_actions + [successor[1]], current_cost + successor[2]),
                              current_cost + successor[2])
                 total += 1
-                if total > 5000:
-                    return [Directions.STOP], (-1, -1)
+                # if total > 1000:
+                #    return [Directions.STOP], (-1, -1)
