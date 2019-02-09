@@ -147,7 +147,7 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         x, y = state
 
         if (x, y) in self.agents:
-            return 60
+            return 50
 
         if action == Directions.NORTH:
             return len([agent for agent in self.agents if agent[1] > y and abs(agent[0] - x) <= self.width // 2]) + 1
