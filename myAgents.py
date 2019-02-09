@@ -103,8 +103,8 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         self.food = gameState.getFood()
         self.agents = gameState.getPacmanPositions()
         self.index = agentIndex
-        self.width = gameState.getWidth()
-        self.height = gameState.getHeight()
+        # self.width = gameState.getWidth()
+        # self.height = gameState.getHeight()
         # Store info for the PositionSearchProblem (no need to change this)
         self.walls = gameState.getWalls()
         self.costFn = self.getCostOfAction
@@ -147,19 +147,19 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         x, y = state
 
         if (x, y) in self.agents:
-            return 80
+            return 30
 
         if action == Directions.NORTH:
-            return len([agent for agent in self.agents if agent[1] > y]) * 2 + 1
+            return len([agent for agent in self.agents if agent[1] > y]) + 1
             # return len([agent for agent in self.agents if agent[1] > y and abs(agent[0] - x) <= self.width // 5]) + 1
         elif action == Directions.SOUTH:
-            return len([agent for agent in self.agents if agent[1] < y]) * 2 + 1
+            return len([agent for agent in self.agents if agent[1] < y]) + 1
             # return len([agent for agent in self.agents if agent[1] < y and abs(agent[0] - x) <= self.width // 5]) + 1
         elif action == Directions.WEST:
-            return len([agent for agent in self.agents if agent[0] < x]) * 2 + 1
+            return len([agent for agent in self.agents if agent[0] < x]) + 1
             # return len([agent for agent in self.agents if agent[0] < x and abs(agent[1] - y) <= self.height // 5]) + 1
         elif action == Directions.EAST:
-            return len([agent for agent in self.agents if agent[0] > x]) * 2 + 1
+            return len([agent for agent in self.agents if agent[0] > x]) + 1
             # return len([agent for agent in self.agents if agent[0] > x and abs(agent[1] - y) <= self.height // 5]) + 1
         '''
         if action == Directions.NORTH:
@@ -188,12 +188,12 @@ def uniformCostSearch(problem):
         current_actions = current_node[1]
         current_cost = current_node[2]
         if problem.isGoalState(current_location):
-            return (current_actions, current_location)
+            return current_actions, current_location
         if current_location not in closed:
             closed.append(current_location)
             for successor in problem.getSuccessors(current_location):
                 p_queue.push((successor[0], current_actions + [successor[1]], current_cost + successor[2]),
                              current_cost + successor[2])
                 total += 1
-                # if total > 1000:
-                #    return [Directions.STOP], (-1, -1)
+                if total > 500:
+                    return [Directions.STOP], (-1, -1)
