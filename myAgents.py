@@ -41,6 +41,9 @@ class MyAgent(Agent):
         """
         "*** YOUR CODE HERE ***"
 
+        if self.target[0] == -1:
+            return Directions.STOP
+
         if 'actionIndex' not in dir(self):
             self.actionIndex = 0
             problem = AnyFoodSearchProblem(state, self.index)
@@ -54,7 +57,6 @@ class MyAgent(Agent):
             self.actions = search_result[0]
             self.target = search_result[1]
             self.actionIndex = 0
-
 
         i = self.actionIndex
         self.actionIndex += 1
@@ -176,7 +178,7 @@ def uniformCostSearch(problem):
     total = 0
     while 1:
         if p_queue.isEmpty():
-            return [Directions.STOP], (0, 0)
+            return [Directions.STOP], (-1, -1)
         current_node = p_queue.pop()
         current_location = current_node[0]
         current_actions = current_node[1]
@@ -190,4 +192,4 @@ def uniformCostSearch(problem):
                              current_cost + successor[2])
                 total += 1
                 if total > 5000:
-                    return [Directions.STOP], (0, 0)
+                    return [Directions.STOP], (-1, -1)
