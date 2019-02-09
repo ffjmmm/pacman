@@ -41,15 +41,15 @@ class MyAgent(Agent):
         """
         "*** YOUR CODE HERE ***"
 
-        if self.target[0] == -1:
-            return Directions.STOP
-
         if 'actionIndex' not in dir(self):
             self.actionIndex = 0
             problem = AnyFoodSearchProblem(state, self.index)
             search_result = uniformCostSearch(problem)
             self.actions = search_result[0]
             self.target = search_result[1]
+
+        if self.target[0] == -1:
+            return Directions.STOP
 
         if not state.getFood()[self.target[0]][self.target[1]]:
             problem = AnyFoodSearchProblem(state, self.index)
