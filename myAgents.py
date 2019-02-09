@@ -150,13 +150,17 @@ class AnyFoodSearchProblem(PositionSearchProblem):
             return 50
 
         if action == Directions.NORTH:
-            return len([agent for agent in self.agents if agent[1] > y and abs(agent[0] - x) <= self.width // 5]) + 1
-	elif action == Directions.SOUTH:
-            return len([agent for agent in self.agents if agent[1] < y and abs(agent[0] - x) <= self.width // 5]) + 1
+            return len([agent for agent in self.agents if agent[1] > y]) + 1
+            # return len([agent for agent in self.agents if agent[1] > y and abs(agent[0] - x) <= self.width // 5]) + 1
+        elif action == Directions.SOUTH:
+            return len([agent for agent in self.agents if agent[1] < y]) + 1
+            # return len([agent for agent in self.agents if agent[1] < y and abs(agent[0] - x) <= self.width // 5]) + 1
         elif action == Directions.WEST:
-            return len([agent for agent in self.agents if agent[0] < x and abs(agent[1] - y) <= self.height // 5]) + 1
+            return len([agent for agent in self.agents if agent[0] < x]) + 1
+            # return len([agent for agent in self.agents if agent[0] < x and abs(agent[1] - y) <= self.height // 5]) + 1
         elif action == Directions.EAST:
-            return len([agent for agent in self.agents if agent[0] > x and abs(agent[1] - y) <= self.height // 5]) + 1
+            return len([agent for agent in self.agents if agent[0] > x]) + 1
+            # return len([agent for agent in self.agents if agent[0] > x and abs(agent[1] - y) <= self.height // 5]) + 1
         '''
         if action == Directions.NORTH:
             return len([agent for agent in self.agents if agent[1] > y]) + 1
