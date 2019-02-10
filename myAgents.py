@@ -51,7 +51,7 @@ class MyAgent(Agent):
         if self.target[0] == -1:
             return Directions.STOP
 
-        if not state.hasFood([self.target[0]], [self.target[1]]):
+        if not state.hasFood(self.target[0], self.target[1]):
             problem = AnyFoodSearchProblem(state, self.index)
             search_result = uniformCostSearch(problem)
             self.actions = search_result[0]
