@@ -51,12 +51,14 @@ class MyAgent(Agent):
         if self.target[0] == -1:
             return Directions.STOP
 
+        '''
         if not state.getFood()[self.target[0]][self.target[1]]:
             problem = AnyFoodSearchProblem(state, self.index)
             search_result = uniformCostSearch(problem)
             self.actions = search_result[0]
             self.target = search_result[1]
             self.actionIndex = 0
+        '''
 
         i = self.actionIndex
         self.actionIndex += 1
@@ -179,7 +181,7 @@ def uniformCostSearch(problem):
     closed = []
     p_queue = util.PriorityQueue()
     p_queue.push((problem.getStartState(), [], 0), 0)
-    total = 0
+    # total = 0
     while 1:
         if p_queue.isEmpty():
             return [Directions.STOP], (-1, -1)
@@ -194,6 +196,6 @@ def uniformCostSearch(problem):
             for successor in problem.getSuccessors(current_location):
                 p_queue.push((successor[0], current_actions + [successor[1]], current_cost + successor[2]),
                              current_cost + successor[2])
-                total += 1
-                if total > 500:
-                    return [Directions.STOP], (-1, -1)
+                # total += 1
+                # if total > 1000:
+                #    return [Directions.STOP], (-1, -1)
