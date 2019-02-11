@@ -157,51 +157,21 @@ def bfs(problem):
             for successor in problem.getSuccessors(current_location):
                 queue.push((successor[0], current_actions + [successor[1]]))
 
-'''
-    """Search the shallowest nodes in the search tree first."""
-    "*** YOUR CODE HERE ***"
-    closed_set = set([])
-    from util import Queue
-    fringes = Queue()
-    state = problem.getStartState()
-    node = (state, None)
-    temp_fringe = [node]
-    fringes.push(temp_fringe)
-    while not fringes.isEmpty():
-        fringe = fringes.pop()
-        state = fringe[-1][0]
-        if problem.isGoalState(state):
-            actions = []
-            for node in fringe[1:]:
-                actions.append(node[1])
-            return actions, state
-        if state not in closed_set:
-            closed_set.add(state)
-            successors = problem.getSuccessors(state)
-            for successor in successors:
-                # if successor[0] == state:
-                #     continue
-                node = (successor[0], successor[1])
-                temp_fringe = fringe.copy()
-                temp_fringe.append(node)
-                fringes.push(temp_fringe)
-    # print('Not found!')
-    return [], None
-'''
 
 def bfsDepth(problem, depth):
     closed = []
     queue = util.Queue()
     queue.push((problem.getStartState(), []))
+    res = []
     while 1:
         if queue.isEmpty():
-            return []
+            return res
         current_node = queue.pop()
         current_location = current_node[0]
         current_actions = current_node[1]
-        if problem.isGoalState(current_location):
-            return current_actions
         if current_location not in closed:
+            if problem.isGoalState(current_location):
+                res.append(current_location)
             closed.append(current_location)
             if len(current_actions) == depth:
                 continue
