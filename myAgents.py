@@ -131,7 +131,7 @@ class AnyFoodSearchProblem(PositionSearchProblem):
             is the incremental cost of expanding to that successor
         """
         successors = []
-        for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
+        for action in [Directions.EAST, Directions.WEST, Directions.NORTH, Directions.SOUTH]:
             x, y = state
             dx, dy = Actions.directionToVector(action)
             nextx, nexty = int(x + dx), int(y + dy)
