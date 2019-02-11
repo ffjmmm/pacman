@@ -131,7 +131,7 @@ class MyAgent(Agent):
             self.init = SKIPCOEF // 2**(rank+2)
         # print("Agent:", self.index, 'Skip:', skip)
         problem = SkipFoodSearchProblem(state, self.index, skip)
-        self.actions = search.bfs(problem)
+        self.actions, state = breadthFirstSearchWithGoalStateReturn(problem)
 
 
 """
@@ -173,38 +173,7 @@ def breadthFirstSearchLimited(problem, limit=3):
     # print('Not found!')
     return []
 
-'''
-def breadthFirstSearch(problem):
-    """Search the shallowest nodes in the search tree first."""
-    "*** YOUR CODE HERE ***"
-    closed_set = set([])
-    from util import Queue
-    fringes = Queue()
-    state = problem.getStartState()
-    node = (state, None)
-    temp_fringe = [node]
-    fringes.push(temp_fringe)
-    while not fringes.isEmpty():
-        fringe = fringes.pop()
-        state = fringe[-1][0]
-        if problem.isGoalState(state):
-            actions = []
-            for node in fringe[1:]:
-                actions.append(node[1])
-            return actions
-        if state not in closed_set:
-            closed_set.add(state)
-            successors = problem.getSuccessors(state)
-            for successor in successors:
-                # if successor[0] == state:
-                #     continue
-                node = (successor[0], successor[1])
-                temp_fringe = fringe.copy()
-                temp_fringe.append(node)
-                fringes.push(temp_fringe)
-    # print('Not found!')
-    return []
-'''
+
 def breadthFirstSearchWithGoalStateReturn(problem):
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
