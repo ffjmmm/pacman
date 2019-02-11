@@ -195,12 +195,12 @@ def bfsDepth(problem, depth):
     queue.push((problem.getStartState(), []))
     while 1:
         if queue.isEmpty():
-            return [], None
+            return []
         current_node = queue.pop()
         current_location = current_node[0]
         current_actions = current_node[1]
         if problem.isGoalState(current_location):
-            return current_actions, current_actions
+            return current_actions
         if current_location not in closed:
             closed.append(current_location)
             if len(current_actions) == depth:
