@@ -131,7 +131,7 @@ class AnyFoodSearchProblem(PositionSearchProblem):
             is the incremental cost of expanding to that successor
         """
         successors = []
-        for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
+        for action in [Directions.NORTH, Directions.EAST, Directions.WEST, Directions.SOUTH]:
             x, y = state
             dx, dy = Actions.directionToVector(action)
             nextx, nexty = int(x + dx), int(y + dy)
@@ -186,6 +186,8 @@ def uniformCostSearch(problem):
         current_node = p_queue.pop()
         if problem.isGoalState(current_node[0]):
             return current_node[1], current_node[0]
+        if len(current_node[1] > 100):
+            continue
         if current_node[0] not in closed:
             closed.append(current_node[0])
             for successor in problem.getSuccessors(current_node[0]):
@@ -194,3 +196,72 @@ def uniformCostSearch(problem):
                 # total += 1
                 # if total > 1000:
                 #    return [Directions.STOP], (-1, -1)
+
+'''
+def uniformCostSearchDepth(problem, depth):
+    """Search the node of least total cost first."""
+
+    closed = []
+    p_queue = util.PriorityQueue()
+    p_queue.push((problem.getStartState(), [], 0), 0)
+    # total = 0
+    end_res = 0
+    end_actions = []
+    while 1:
+        if p_queue.isEmpty():
+            return [Directions.STOP], (-1, -1)
+        current_node = p_queue.pop()
+        current_location = current_node[0]
+        current_actions = current_node[1]
+        current_cost = current_node[2]
+
+        len_actions = len(current_actions)
+        if len_actions > depth:
+            continue
+        if current_location in closed:
+            continue
+        if problem.isGoalState(current_location):
+            return current_actions, current_location
+
+        if len_actions == depth:
+            eva_res = 
+
+        closed.append(current_location)
+        for successor in problem.getSuccessors(current_location):
+            p_queue.push((successor[0], current_actions + [successor[1]], current_cost + successor[2]),
+                         current_cost + successor[2])
+'''
+
+'''
+def nullHeuristic(state, problem=None):
+    return 0
+
+
+def aStarSearchWithDepth(problem, depth, heuristic=nullHeuristic, end_heuristic=nullHeuristic):
+    closed = []
+    p_queue = util.PriorityQueue()
+    p_queue.push((problem.getStartState(), [], 0), heuristic(problem.getStartState(), problem))
+    end_cost = 0
+    end_direction = []
+    while 1:
+        if p_queue.isEmpty():
+            return False
+        current_node = p_queue.pop()
+        current_location = current_node[0]
+        current_actions = current_node[1]
+        current_cost = current_node[2]
+        if len(current_actions) > depth:
+            continue
+        if problem.isGoalState(current_location):
+            return current_actions
+        if len(current_actions) == depth:
+            heuristic_res = end_heuristic(current_location)
+            if heuristic_res < end_cost:
+                end_cost = heuristic_res
+                end_direction = current_actions
+        if current_location not in closed:
+            closed.append(current_location)
+            for successor in problem.getSuccessors(current_location):
+                p_queue.push((successor[0], current_actions + [successor[1]], current_cost + successor[2]),
+                             current_cost + successor[2] + heuristic(successor[0], problem))
+'''
