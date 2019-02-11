@@ -94,7 +94,7 @@ class MyAgent(Agent):
         if n == 1:
             return
         problem = AgentsSearchProblem(state, self.index)
-        nearbyPacmen = breadthFirstSearchCountLimited(problem, 7)
+        nearbyPacmen = bfsDepth(problem, 7)
         nearbyPacmenNumber = len(nearbyPacmen)
         if nearbyPacmenNumber == 1:
             return
