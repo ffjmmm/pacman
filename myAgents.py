@@ -159,7 +159,6 @@ def bfs(problem):
 
 
 def bfsDepth(problem, depth):
-    '''
     closed = []
     queue = util.Queue()
     queue.push((problem.getStartState(), []))
@@ -178,8 +177,8 @@ def bfsDepth(problem, depth):
                 continue
             for successor in problem.getSuccessors(current_location):
                 queue.push((successor[0], current_actions + [successor[1]]))
-    '''
 
+'''
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
     # count = 0
@@ -214,7 +213,7 @@ def bfsDepth(problem, depth):
                     continue
                 fringes.push(temp_fringe)
     return goals
-
+'''
 
 class SkipFoodSearchProblem(PositionSearchProblem):
     def __init__(self, gameState, agentIndex, skip):
