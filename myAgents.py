@@ -282,7 +282,7 @@ class AnyFoodSearchProblem(PositionSearchProblem):
             nextx, nexty = int(x + dx), int(y + dy)
             if not self.walls[nextx][nexty]:
                 nextState = (nextx, nexty)
-                cost = self.costFn(nextState, action)
+                cost = self.costFn(nextState)
                 successors.append((nextState, action, cost))
 
         self._expanded += 1 # DO NOT CHANGE
@@ -321,7 +321,7 @@ class PacmanSearchProblem(PositionSearchProblem):
             nextx, nexty = int(x + dx), int(y + dy)
             if not self.walls[nextx][nexty]:
                 nextState = (nextx, nexty)
-                cost = self.costFn(nextState, action)
+                cost = self.costFn(nextState)
                 successors.append((nextState, action, cost))
 
         self._expanded += 1 # DO NOT CHANGE
