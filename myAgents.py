@@ -210,7 +210,7 @@ def bfsDepth(problem, depth):
                 node = successor[0]
                 temp_fringe = fringe.copy()
                 temp_fringe.append(node)
-                if len(temp_fringe) > limit:
+                if len(temp_fringe) > depth:
                     continue
                 fringes.push(temp_fringe)
     return goals
