@@ -188,7 +188,7 @@ def uniformCostSearch(problem):
         current_node = p_queue.pop()
         current_location = current_node[0]
 
-        if current_node[3] > 100:
+        if current_node[3] > 50:
             continue
 
         if problem.isGoalState(current_location):
