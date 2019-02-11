@@ -191,7 +191,7 @@ def uniformCostSearch(problem):
         if problem.isGoalState(current_location):
             return current_node[1], current_location
         if current_location not in closed:
-            closed.append(current_location)
+            closed.add(current_location)
             for successor in problem.getSuccessors(current_location):
                 p_queue.push((successor[0], current_node[1] + [successor[1]], current_cost + successor[2]),
                              current_cost + successor[2])
