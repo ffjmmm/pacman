@@ -178,42 +178,6 @@ def bfsDepth(problem, depth):
             for successor in problem.getSuccessors(current_location):
                 queue.push((successor[0], current_actions + [successor[1]]))
 
-'''
-    """Search the shallowest nodes in the search tree first."""
-    "*** YOUR CODE HERE ***"
-    # count = 0
-    goals = []
-    closed_set = set([])
-    from util import Queue
-    fringes = Queue()
-    state = problem.getStartState()
-    node = state
-    temp_fringe = [node]
-    fringes.push(temp_fringe)
-    while not fringes.isEmpty():
-        fringe = fringes.pop()
-        state = fringe[-1]
-        # if problem.isGoalState(state):
-        #     actions = []
-        #     for node in fringe[1:]:
-        #         actions.append(node[1])
-        #     return actions
-        if state not in closed_set:
-            closed_set.add(state)
-            if problem.isGoalState(state):
-                goals.append(state)
-            successors = problem.getSuccessors(state)
-            for successor in successors:
-                # if successor[0] == state:
-                #     continue
-                node = successor[0]
-                temp_fringe = fringe.copy()
-                temp_fringe.append(node)
-                if len(temp_fringe) > depth:
-                    continue
-                fringes.push(temp_fringe)
-    return goals
-'''
 
 class SkipFoodSearchProblem(PositionSearchProblem):
     def __init__(self, gameState, agentIndex, skip):
