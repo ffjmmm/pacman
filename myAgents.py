@@ -151,7 +151,7 @@ def bfs(problem):
         current_location = current_node[0]
         current_actions = current_node[1]
         if problem.isGoalState(current_location):
-            return current_actions, current_actions
+            return current_actions, current_location
         if current_location not in closed:
             closed.append(current_location)
             for successor in problem.getSuccessors(current_location):
