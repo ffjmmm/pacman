@@ -180,22 +180,24 @@ def uniformCostSearch(problem):
 
     closed = []
     p_queue = util.PriorityQueue()
-    p_queue.push((problem.getStartState(), [], 0), 0)
+    p_queue.push((problem.getStartState(), [], 0, 0), 0)
     # total = 0
     while 1:
         if p_queue.isEmpty():
             return [Directions.STOP], (-1, -1)
         current_node = p_queue.pop()
         current_location = current_node[0]
-        current_cost = current_node[2]
+
+        if current_node[3] > 200:
+            continue
 
         if problem.isGoalState(current_location):
             return current_node[1], current_location
         if current_location not in closed:
             closed.append(current_location)
             for successor in problem.getSuccessors(current_location):
-                p_queue.push((successor[0], current_node[1] + [successor[1]], current_cost + successor[2]),
-                             current_cost + successor[2])
+                p_queue.push((successor[0], current_node[1] + [successor[1]], current_node[2] + successor[2], current_node[3] + 1),
+                             current_node[2] + successor[2])
                 # total += 1
                 # if total > 1000:
                 #    return [Directions.STOP], (-1, -1)
