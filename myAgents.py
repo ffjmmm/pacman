@@ -93,7 +93,7 @@ class MyAgent(Agent):
         self.pacmanNumber = n
         if n == 1:
             return
-        problem = PacmanSearchProblem(state, self.index)
+        problem = AgentsSearchProblem(state, self.index)
         nearbyPacmen = breadthFirstSearchCountLimited(problem, 7)
         nearbyPacmenNumber = len(nearbyPacmen)
         if nearbyPacmenNumber == 1:
@@ -141,6 +141,23 @@ search.py and searchProblems.py. (ClosestDotAgent as an example below)
 
 
 def bfs(problem):
+    closed = []
+    queue = util.Queue()
+    queue.push((problem.getStartState(), []))
+    while 1:
+        if queue.isEmpty():
+            return [], None
+        current_node = queue.pop()
+        current_location = current_node[0]
+        current_actions = current_node[1]
+        if problem.isGoalState(current_location):
+            return current_actions, current_actions
+        if current_location not in closed:
+            closed.append(current_location)
+            for successor in problem.getSuccessors(current_location):
+                queue.push((successor[0], current_actions + [successor[1]]))
+
+'''
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
     closed_set = set([])
@@ -170,9 +187,28 @@ def bfs(problem):
                 fringes.push(temp_fringe)
     # print('Not found!')
     return [], None
+'''
 
+def bfsDepth(problem, depth):
+    closed = []
+    queue = util.Queue()
+    queue.push((problem.getStartState(), []))
+    while 1:
+        if queue.isEmpty():
+            return [], None
+        current_node = queue.pop()
+        current_location = current_node[0]
+        current_actions = current_node[1]
+        if problem.isGoalState(current_location):
+            return current_actions, current_actions
+        if current_location not in closed:
+            closed.append(current_location)
+            if len(current_actions) == depth:
+                continue
+            for successor in problem.getSuccessors(current_location):
+                queue.push((successor[0], current_actions + [successor[1]]))
 
-def breadthFirstSearchCountLimited(problem, limit=3):
+'''
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
     # count = 0
@@ -207,7 +243,7 @@ def breadthFirstSearchCountLimited(problem, limit=3):
                     continue
                 fringes.push(temp_fringe)
     return goals
-
+'''
 
 class SkipFoodSearchProblem(PositionSearchProblem):
     def __init__(self, gameState, agentIndex, skip):
@@ -289,7 +325,7 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         return successors
 
 
-class PacmanSearchProblem(PositionSearchProblem):
+class AgentsSearchProblem(PositionSearchProblem):
     def __init__(self, gameState, agentIndex):
         "Stores information from the gameState.  You don't need to change this."
         # Store the food for later reference
