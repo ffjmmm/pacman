@@ -64,7 +64,7 @@ class MyAgent(Agent):
                     if skip == 0:
                         skip = m - 1
                     problem = SkipFoodSearchProblem(state, self.index, skip)
-                    self.actions, self.goal = breadthFirstSearchWithGoalStateReturn(problem)
+                    self.actions, self.goal = bfs(problem)
                     # self.goal = None
         if len(self.actions) > 0:
             action = self.actions[0]
@@ -72,7 +72,7 @@ class MyAgent(Agent):
             return action
         else:
             problem = AnyFoodSearchProblem(state, self.index)
-            self.actions, self.goal = breadthFirstSearchWithGoalStateReturn(problem)
+            self.actions, self.goal = bfs(problem)
             self.init -= 1
             return self.getAction(state)
 
@@ -131,7 +131,7 @@ class MyAgent(Agent):
             self.init = SKIPCOEF // 2**(rank+2)
         # print("Agent:", self.index, 'Skip:', skip)
         problem = SkipFoodSearchProblem(state, self.index, skip)
-        self.actions, state = breadthFirstSearchWithGoalStateReturn(problem)
+        self.actions, state = bfs(problem)
 
 
 """
@@ -139,42 +139,8 @@ Put any other SearchProblems or search methods below. You may also import classe
 search.py and searchProblems.py. (ClosestDotAgent as an example below)
 """
 
-def breadthFirstSearchLimited(problem, limit=3):
-    """Search the shallowest nodes in the search tree first."""
-    "*** YOUR CODE HERE ***"
-    closed_set = set([])
-    from util import Queue
-    fringes = Queue()
-    state = problem.getStartState()
-    node = (state, None)
-    temp_fringe = [node]
-    fringes.push(temp_fringe)
-    while not fringes.isEmpty():
-        fringe = fringes.pop()
-        state = fringe[-1][0]
-        if problem.isGoalState(state):
-            actions = []
-            for node in fringe[1:]:
-                actions.append(node[1])
-            return actions
-        if state not in closed_set:
-            closed_set.add(state)
-            successors = problem.getSuccessors(state)
-            successors.reverse()
-            for successor in successors:
-                # if successor[0] == state:
-                #     continue
-                node = (successor[0], successor[1])
-                temp_fringe = fringe.copy()
-                temp_fringe.append(node)
-                if len(temp_fringe) > limit:
-                    continue
-                fringes.push(temp_fringe)
-    # print('Not found!')
-    return []
 
-
-def breadthFirstSearchWithGoalStateReturn(problem):
+def bfs(problem):
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
     closed_set = set([])
@@ -205,7 +171,7 @@ def breadthFirstSearchWithGoalStateReturn(problem):
     # print('Not found!')
     return [], None
 
-# """待优化"""
+
 def breadthFirstSearchCountLimited(problem, limit=3):
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
@@ -271,25 +237,63 @@ class SkipFoodSearchProblem(PositionSearchProblem):
 
 
 class AnyFoodSearchProblem(PositionSearchProblem):
+    """
+    A search problem for finding a path to any food.
+
+    This search problem is just like the PositionSearchProblem, but has a
+    different goal test, which you need to fill in below.  The state space and
+    successor function do not need to be changed.
+
+    The class definition above, AnyFoodSearchProblem(PositionSearchProblem),
+    inherits the methods of the PositionSearchProblem.
+
+    You can use this search problem to help you fill in the findPathToClosestDot
+    method.
+    """
+
     def __init__(self, gameState, agentIndex):
         "Stores information from the gameState.  You don't need to change this."
         # Store the food for later reference
         self.food = gameState.getFood()
         # Store info for the PositionSearchProblem (no need to change this)
         self.walls = gameState.getWalls()
-        self.startState = gameState.getPacmanPosition(agentIndex)
         self.costFn = lambda x: 1
+        self.startState = gameState.getPacmanPosition(agentIndex)
         self._visited, self._visitedlist, self._expanded = {}, [], 0 # DO NOT CHANGE
 
     def isGoalState(self, state):
         return self.food[state[0]][state[1]]
+        # util.raiseNotDefined()
+
+    def getSuccessors(self, state):
+        """
+        Returns successor states, the actions they require, and a cost of 1.
+
+         As noted in search.py:
+            For a given state, this should return a list of triples, (successor,
+            action, stepCost), where 'successor' is a successor to the current
+            state, 'action' is the action required to get there, and 'stepCost'
+            is the incremental cost of expanding to that successor
+        """
+        successors = []
+        for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
+            x, y = state
+            dx, dy = Actions.directionToVector(action)
+            nextx, nexty = int(x + dx), int(y + dy)
+            if not self.walls[nextx][nexty]:
+                nextState = (nextx, nexty)
+                cost = self.costFn(nextState, action)
+                successors.append((nextState, action, cost))
+
+        self._expanded += 1 # DO NOT CHANGE
+        return successors
 
 
 class PacmanSearchProblem(PositionSearchProblem):
     def __init__(self, gameState, agentIndex):
         "Stores information from the gameState.  You don't need to change this."
         # Store the food for later reference
-        self.pacmanPositions = set(gameState.getPacmanPositions())
+        self.agents = gameState.getPacmanPositions()
 
         # Store info for the PositionSearchProblem (no need to change this)
         self.walls = gameState.getWalls()
@@ -298,4 +302,27 @@ class PacmanSearchProblem(PositionSearchProblem):
         self._visited, self._visitedlist, self._expanded = {}, [], 0 # DO NOT CHANGE
 
     def isGoalState(self, state):
-        return state in self.pacmanPositions
+        return state in self.agents
+
+    def getSuccessors(self, state):
+        """
+        Returns successor states, the actions they require, and a cost of 1.
+
+         As noted in search.py:
+            For a given state, this should return a list of triples, (successor,
+            action, stepCost), where 'successor' is a successor to the current
+            state, 'action' is the action required to get there, and 'stepCost'
+            is the incremental cost of expanding to that successor
+        """
+        successors = []
+        for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
+            x, y = state
+            dx, dy = Actions.directionToVector(action)
+            nextx, nexty = int(x + dx), int(y + dy)
+            if not self.walls[nextx][nexty]:
+                nextState = (nextx, nexty)
+                cost = self.costFn(nextState, action)
+                successors.append((nextState, action, cost))
+
+        self._expanded += 1 # DO NOT CHANGE
+        return successors
