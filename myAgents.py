@@ -263,7 +263,7 @@ class AgentsSearchProblem(PositionSearchProblem):
     def __init__(self, gameState, agentIndex):
         "Stores information from the gameState.  You don't need to change this."
         # Store the food for later reference
-        self.agents = gameState.getPacmanPositions()
+        self.agents = set(gameState.getPacmanPositions())
 
         # Store info for the PositionSearchProblem (no need to change this)
         self.walls = gameState.getWalls()
