@@ -101,9 +101,7 @@ class MyAgent(Agent):
         pacmanIndexes = {}
         for i in range(n):
             pacmanIndexes[pacmanPositions[i]] = i
-        # myPosition = pacmanPositions[self.index]
-        # print("Agent:", self.index, pacmanPositions)
-        # print(nearbyPacmenNumber)
+
         minIndex = self.index
         maxIndex = self.index
         for pacman in nearbyPacmen:
@@ -193,6 +191,14 @@ class SkipFoodSearchProblem(PositionSearchProblem):
 
     def isGoalState(self, state):
         x, y = state
+        if self.food[x][y]:
+            if self.skip == 0 and state not in self.skipedFood:
+                return True
+            if self.skip > 0:
+                self.skip -= 1
+                self.skipedFood.add(state)
+        return False
+        '''
         if not self.food[x][y]:
             return False
         if state in self.skipedFood:
@@ -202,7 +208,7 @@ class SkipFoodSearchProblem(PositionSearchProblem):
             self.skipedFood.add(state)
             return False
         return True
-
+        '''
 
 class AnyFoodSearchProblem(PositionSearchProblem):
     """
