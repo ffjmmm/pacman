@@ -51,28 +51,26 @@ class MyAgent(Agent):
         """
         "*** YOUR CODE HERE ***"
 
-        if self.goal is not None:
-            x, y = self.goal
+        if self.target is not None:
+            x, y = self.target
             if not state.hasFood(x, y) and len(self.actions) > 0:
                 if self.init > 0:
                     self.actions = []
-                    self.goal = None
-                    # print("Agent:", self.index, self.init)
+                    self.target = None
                 else:
                     m = state.getNumFood()
                     skip = m // 2 // self.pacmanNumber
                     if skip == 0:
                         skip = m - 1
                     problem = SkipFoodSearchProblem(state, self.index, skip)
-                    self.actions, self.goal = bfs(problem)
-                    # self.goal = None
+                    self.actions, self.target = bfs(problem)
         if len(self.actions) > 0:
             action = self.actions[0]
             del self.actions[0]
             return action
         else:
             problem = AnyFoodSearchProblem(state, self.index)
-            self.actions, self.goal = bfs(problem)
+            self.actions, self.target = bfs(problem)
             self.init -= 1
             return self.getAction(state)
 
@@ -85,7 +83,7 @@ class MyAgent(Agent):
         "*** YOUR CODE HERE"
         self.init = 4
         self.actions = []
-        self.goal = None
+        self.target = None
 
 
     def registerInitialState(self, state):
