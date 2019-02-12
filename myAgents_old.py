@@ -103,7 +103,7 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         "Stores information from the gameState.  You don't need to change this."
         # Store the food for later reference
         self.food = gameState.getFood()
-        self.agents = gameState.getPacmanPositions()
+        self.agents = set(gameState.getPacmanPositions())
         self.index = agentIndex
         # self.width = gameState.getWidth()
         # self.height = gameState.getHeight()
