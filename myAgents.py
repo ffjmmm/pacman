@@ -22,16 +22,6 @@ import time
 import search
 
 """
-Version2.1:全新策略
-调参，目前最佳
-普通人的init             self.init = 3
-skip = 0的人的init       self.init = SKIPCOEF // 2
-开始转战的系数            SKIPCOEF = (m // 2 // (maxIndex - minIndex))+1
-开始后转战步数            skip = m // 2 // self.pacmanNumber
-最高得分：1190.6690497116244
-"""
-
-"""
 IMPORTANT
 `agent` defines which agent you will use. By default, it is set to ClosestDotAgent,
 but when you're ready to test your own agent, replace it with MyAgent
@@ -54,12 +44,12 @@ class MyAgent(Agent):
         if self.target is not None:
             x, y = self.target
             if not state.hasFood(x, y) and len(self.actions) > 0:
-                if self.init > 0:
+                if self.num > 0:
                     self.actions = []
                     self.target = None
                 else:
                     m = state.getNumFood()
-                    skip = m // 2 // self.pacmanNumber
+                    skip = m // self.pacmanNumber
                     if skip == 0:
                         skip = m - 1
                     problem = SkipFoodSearchProblem(state, self.index, skip)
@@ -71,7 +61,7 @@ class MyAgent(Agent):
         else:
             problem = AnyFoodSearchProblem(state, self.index)
             self.actions, self.target = bfs(problem)
-            self.init -= 1
+            self.num -= 1
             return self.getAction(state)
 
     def initialize(self):
@@ -81,60 +71,19 @@ class MyAgent(Agent):
         leave it blank
         """
         "*** YOUR CODE HERE"
-        self.init = 4
+        self.num = 4
         self.actions = []
         self.target = None
-
 
     def registerInitialState(self, state):
         n = state.getNumAgents()
         self.pacmanNumber = n
-        if n == 1:
-            return
-        problem = AgentsSearchProblem(state, self.index)
-        nearbyPacmen = bfsDepth(problem, 7)
-        nearbyPacmenNumber = len(nearbyPacmen)
-        if nearbyPacmenNumber == 1:
-            return
-        pacmanPositions = state.getPacmanPositions()
-        m = state.getNumFood()
-        pacmanIndexes = {}
-        for i in range(n):
-            pacmanIndexes[pacmanPositions[i]] = i
-
-        minIndex = self.index
-        maxIndex = self.index
-        for pacman in nearbyPacmen:
-            tmp = pacmanIndexes[pacman]
-            if tmp < minIndex:
-                minIndex = tmp
-            elif tmp > maxIndex:
-                maxIndex = tmp
-        # for i in range(n):
-        #     # if pacmanPositions[i] == myPosition:
-        #     if pacmanPositions[i][0] and pacmanPositions[i][1]
-        #         nearbyPacmen.append(i)
-        # print("Agent:", self.index, 'NearbyPacman:', len(nearbyPacmen))
-        SKIPCOEF = (m // 2 // (maxIndex - minIndex))+1
-        # print("SKIPCOEF", SKIPCOEF)
-        rank = self.index - minIndex
-        skip = rank * SKIPCOEF
-        # if skip == 0:
-        #     self.init = SKIPCOEF // 2 - 1
-        if skip == 0:
-            self.init = SKIPCOEF // 2 - 1
-        else:
-            self.init = SKIPCOEF // 2**(rank+2)
-        # print("Agent:", self.index, 'Skip:', skip)
-        problem = SkipFoodSearchProblem(state, self.index, skip)
-        self.actions, state = bfs(problem)
 
 
 """
 Put any other SearchProblems or search methods below. You may also import classes/methods in
 search.py and searchProblems.py. (ClosestDotAgent as an example below)
 """
-
 
 def bfs(problem):
     closed = set([])
@@ -198,17 +147,6 @@ class SkipFoodSearchProblem(PositionSearchProblem):
                 self.skip -= 1
                 self.skipedFood.add(state)
         return False
-        '''
-        if not self.food[x][y]:
-            return False
-        if state in self.skipedFood:
-            return False
-        if self.skip > 0:
-            self.skip -= 1
-            self.skipedFood.add(state)
-            return False
-        return True
-        '''
 
 class AnyFoodSearchProblem(PositionSearchProblem):
     """
