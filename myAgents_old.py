@@ -187,7 +187,7 @@ def uniformCostSearch(problem):
         current_node = p_queue.pop()
         current_location = current_node[0]
         current_cost = current_node[2]
-        if problem.isGoalState(current_location) or current_node[3] == 100:
+        if problem.isGoalState(current_location) or current_node[3] == 50:
             return current_node[1], current_location
         if current_location not in closed:
             closed.add(current_location)
