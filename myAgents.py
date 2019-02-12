@@ -141,7 +141,7 @@ search.py and searchProblems.py. (ClosestDotAgent as an example below)
 
 
 def bfs(problem):
-    closed = []
+    closed = set([])
     queue = util.Queue()
     queue.push((problem.getStartState(), []))
     while 1:
@@ -153,13 +153,13 @@ def bfs(problem):
         if problem.isGoalState(current_location):
             return current_actions, current_location
         if current_location not in closed:
-            closed.append(current_location)
+            closed.add(current_location)
             for successor in problem.getSuccessors(current_location):
                 queue.push((successor[0], current_actions + [successor[1]]))
 
 
 def bfsDepth(problem, depth):
-    closed = []
+    closed = set([])
     queue = util.Queue()
     queue.push((problem.getStartState(), []))
     res = []
@@ -172,7 +172,7 @@ def bfsDepth(problem, depth):
         if current_location not in closed:
             if problem.isGoalState(current_location):
                 res.append(current_location)
-            closed.append(current_location)
+            closed.add(current_location)
             if len(current_actions) == depth:
                 continue
             for successor in problem.getSuccessors(current_location):
