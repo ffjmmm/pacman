@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/visualinfo.c \
-  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include/GL/glew.h
+  /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/CGL/deps/glew/src/visualinfo.c \
+  /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/CGL/deps/glew/include/GL/glew.h

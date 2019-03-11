@@ -1,4 +1,4 @@
-# Install script for directory: /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src
+# Install script for directory: /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,78 +35,78 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+     "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master" TYPE EXECUTABLE FILES "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/Debug/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+file(INSTALL DESTINATION "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm" TYPE EXECUTABLE FILES "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/Debug/pathtracer")
+    if(EXISTS "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       execute_process(COMMAND /usr/bin/install_name_tool
         -delete_rpath "/Library/Frameworks"
-        "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       endif()
     endif()
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+     "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master" TYPE EXECUTABLE FILES "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/Release/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+file(INSTALL DESTINATION "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm" TYPE EXECUTABLE FILES "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/Release/pathtracer")
+    if(EXISTS "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       execute_process(COMMAND /usr/bin/install_name_tool
         -delete_rpath "/Library/Frameworks"
-        "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       endif()
     endif()
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+     "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master" TYPE EXECUTABLE FILES "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/MinSizeRel/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+file(INSTALL DESTINATION "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm" TYPE EXECUTABLE FILES "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/MinSizeRel/pathtracer")
+    if(EXISTS "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       execute_process(COMMAND /usr/bin/install_name_tool
         -delete_rpath "/Library/Frameworks"
-        "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       endif()
     endif()
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+     "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master" TYPE EXECUTABLE FILES "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/RelWithDebInfo/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+file(INSTALL DESTINATION "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm" TYPE EXECUTABLE FILES "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/RelWithDebInfo/pathtracer")
+    if(EXISTS "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       execute_process(COMMAND /usr/bin/install_name_tool
         -delete_rpath "/Library/Frameworks"
-        "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/pathtracer")
+        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/pathtracer")
       endif()
     endif()
   endif()

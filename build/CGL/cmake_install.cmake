@@ -1,8 +1,8 @@
-# Install script for directory: /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL
+# Install script for directory: /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/CGL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL")
+  set(CMAKE_INSTALL_PREFIX "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/CGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,9 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/cmake_install.cmake")
-  include("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/cmake_install.cmake")
-  include("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/cmake_install.cmake")
+  include("/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/cmake_install.cmake")
+  include("/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/cmake_install.cmake")
+  include("/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/cmake_install.cmake")
 
 endif()
 

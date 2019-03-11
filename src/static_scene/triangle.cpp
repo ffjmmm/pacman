@@ -41,7 +41,6 @@ bool Triangle::intersect(const Ray& r) const {
         }
     }
     return false;
-
 }
 
 bool Triangle::intersect(const Ray& r, Intersection *isect) const {
@@ -52,7 +51,7 @@ bool Triangle::intersect(const Ray& r, Intersection *isect) const {
 
     Vector3D p1(mesh->positions[v1]), p2(mesh->positions[v2]), p3(mesh->positions[v3]);
     Vector3D n1(mesh->normals[v1]), n2(mesh->normals[v2]), n3(mesh->normals[v3]);
-    
+  
     Vector3D E1 = p2 - p1;
     Vector3D E2 = p3 - p1;
     Vector3D S = r.o - p1;
@@ -75,8 +74,7 @@ bool Triangle::intersect(const Ray& r, Intersection *isect) const {
         }
     }
     return false;
-
-  
+    
 }
 
 void Triangle::draw(const Color& c, float alpha) const {

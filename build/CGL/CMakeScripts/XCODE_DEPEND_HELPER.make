@@ -8,63 +8,63 @@ default:
 # link.  This forces Xcode to relink the targets from scratch.  It
 # does not seem to check these dependencies itself.
 PostBuild.CGL.Debug:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/Debug/libCGL_osx.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/Debug/libCGL_osx.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/Debug/libCGL_osx.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/Debug/libCGL_osx.a
 
 
 PostBuild.glew.Debug:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/Debug/libglew.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/Debug/libglew.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/Debug/libglew.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/Debug/libglew.a
 
 
 PostBuild.glfw.Debug:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Debug/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Debug/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Debug/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Debug/libglfw3.a
 
 
 PostBuild.CGL.Release:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/Release/libCGL_osx.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/Release/libCGL_osx.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/Release/libCGL_osx.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/Release/libCGL_osx.a
 
 
 PostBuild.glew.Release:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/Release/libglew.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/Release/libglew.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/Release/libglew.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/Release/libglew.a
 
 
 PostBuild.glfw.Release:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Release/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Release/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Release/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Release/libglfw3.a
 
 
 PostBuild.CGL.MinSizeRel:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/MinSizeRel/libCGL_osx.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/MinSizeRel/libCGL_osx.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/MinSizeRel/libCGL_osx.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/MinSizeRel/libCGL_osx.a
 
 
 PostBuild.glew.MinSizeRel:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/MinSizeRel/libglew.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/MinSizeRel/libglew.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/MinSizeRel/libglew.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/MinSizeRel/libglew.a
 
 
 PostBuild.glfw.MinSizeRel:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a
 
 
 PostBuild.CGL.RelWithDebInfo:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/RelWithDebInfo/libCGL_osx.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src/RelWithDebInfo/libCGL_osx.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/RelWithDebInfo/libCGL_osx.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/src/RelWithDebInfo/libCGL_osx.a
 
 
 PostBuild.glew.RelWithDebInfo:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/RelWithDebInfo/libglew.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew/RelWithDebInfo/libglew.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/RelWithDebInfo/libglew.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glew/RelWithDebInfo/libglew.a
 
 
 PostBuild.glfw.RelWithDebInfo:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a
 
 
 

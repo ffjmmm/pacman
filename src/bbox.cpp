@@ -13,13 +13,33 @@ bool BBox::intersect(const Ray& r, double& t0, double& t1) const {
   // Implement ray - bounding box intersection test
   // If the ray intersected the bouding box within the range given by
   // t0, t1, update t0 and t1 with the new intersection times.
-
-  
-  return false;
-
-  
+    double t_min_x = (min.x - r.o.x) / r.d.x;
+    double t_max_x = (max.x - r.o.x) / r.d.x;
+    if (t_min_x > t_max_x) {
+        double t = t_min_x;
+        t_min_x = t_max_x;
+        t_max_x = t;
+    }
+    double t_min_y = (min.y - r.o.y) / r.d.y;
+    double t_max_y = (max.y - r.o.y) / r.d.y;
+    if (t_min_y > t_max_y) {
+        double t = t_min_y;
+        t_min_y = t_max_y;
+        t_max_y = t;
+    }
+    double t_min_z = (min.z - r.o.z) / r.d.z;
+    double t_max_z = (max.z - r.o.z) / r.d.z;
+    if (t_min_z > t_max_z) {
+        double t = t_min_z;
+        t_min_z = t_max_z;
+        t_max_z = t;
+    }
+    t0 = std::max(t_min_x, std::max(t_min_y, t_min_z));
+    t1 = std::min(t_max_x, std::min(t_max_y, t_max_z));
+    return t0 <= t1 && t1 >= 0;
 }
 
+    
 void BBox::draw(Color c, float alpha) const {
 
   glColor4f(c.r, c.g, c.b, alpha);

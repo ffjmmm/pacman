@@ -162,7 +162,6 @@ Ray Camera::generate_ray(double x, double y) const {
     d.normalize();
     Vector3D origin = pos;
     return Ray(origin, d, fClip);
-
 }
 
 

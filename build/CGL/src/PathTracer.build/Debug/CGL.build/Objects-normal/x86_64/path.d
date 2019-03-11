@@ -1,2 +1,1 @@
-dependencies: \
-  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/path.cpp
+dependencies: /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/CGL/src/path.cpp

@@ -8,23 +8,23 @@ default:
 # link.  This forces Xcode to relink the targets from scratch.  It
 # does not seem to check these dependencies itself.
 PostBuild.glfw.Debug:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Debug/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Debug/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Debug/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Debug/libglfw3.a
 
 
 PostBuild.glfw.Release:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Release/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/Release/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Release/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/Release/libglfw3.a
 
 
 PostBuild.glfw.MinSizeRel:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/MinSizeRel/libglfw3.a
 
 
 PostBuild.glfw.RelWithDebInfo:
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a:
-	/bin/rm -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a:
+	/bin/rm -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/src/RelWithDebInfo/libglfw3.a
 
 
 

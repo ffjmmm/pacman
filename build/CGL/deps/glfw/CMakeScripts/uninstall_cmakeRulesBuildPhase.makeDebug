@@ -2,9 +2,9 @@
 # Custom rules for uninstall
 .SUFFIXES: 
 all: \
-	/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/CMakeFiles/uninstall
+	/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/CMakeFiles/uninstall
 
 
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/CMakeFiles/uninstall: 
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/CMakeFiles/uninstall: 
 	echo ""
-	/usr/local/Cellar/cmake/3.13.3/bin/cmake -P /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/cmake_uninstall.cmake
+	/usr/local/Cellar/cmake/3.13.3/bin/cmake -P /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/cmake_uninstall.cmake

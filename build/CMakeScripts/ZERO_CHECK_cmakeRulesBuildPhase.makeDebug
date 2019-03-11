@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CMakeFiles/ZERO_CHECK
+	/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CMakeFiles/ZERO_CHECK
 
 
-/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CMakeFiles/ZERO_CHECK: 
+/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CMakeScripts/ReRunCMake.make
+	make -f /Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CMakeScripts/ReRunCMake.make

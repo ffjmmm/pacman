@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/install_manifest.txt" files)
+file(READ "/Users/fjm/CS184/p3-1-pathtracer-ffjmmm/build/CGL/deps/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})
