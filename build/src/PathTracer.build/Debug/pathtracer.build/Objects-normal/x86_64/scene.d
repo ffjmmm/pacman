@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/scene.cpp \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/scene.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/CGL.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/misc.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/color.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/GL/glew.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/draw_style.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/mesh_view.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../bbox.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../ray.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/vector3D.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/vector4D.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/matrix4x4.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/spectrum.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../static_scene/scene.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../static_scene/primitive.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../static_scene/../intersection.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../bsdf.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/matrix3x3.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../sampler.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/vector2D.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../random_util.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../image.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/dynamic_scene/../static_scene/../bbox.h

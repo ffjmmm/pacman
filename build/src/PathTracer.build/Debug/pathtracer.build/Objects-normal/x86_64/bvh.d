@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/bvh.cpp \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/bvh.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/scene.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/CGL.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/misc.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/primitive.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/../intersection.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/vector3D.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/spectrum.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/color.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/bsdf.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/matrix3x3.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/sampler.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/vector2D.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/random_util.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/image.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/../bbox.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/ray.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/vector4D.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL/matrix4x4.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/aggregate.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/triangle.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/object.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/static_scene/../halfEdgeMesh.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/collada/polymesh_info.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/collada/collada_info.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/collada/material_info.h \
+  /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/src/collada/../bsdf.h

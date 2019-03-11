@@ -1,0 +1,1424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		014A44DA2FF94A2492B66237 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 970E047FE1CE41A5BCB88151 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				70DA09353D854A558DFA9813 /* CMake Rules */,
+			);
+			dependencies = (
+				7B7AA8D988384283BA7A3F75 /* PBXTargetDependency */,
+				8C418E36BAC043C2B38FC729 /* PBXTargetDependency */,
+				D5BC05A5394143D3BF9FD719 /* PBXTargetDependency */,
+				1E03BA2741FC475ABF797CE6 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		953E3D766D6C49CE9F7AA924 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7EF71DC97CB34A7C8D415D95 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				50C1D420240E49D285625699 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		A485F7B77EED4B98BD69CFD0 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9E910827078A43DC859C02EF /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				FCBBCBDC2F1B4AD3B9E0F050 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				DBBAC9B5DDAD4210A2307036 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		F5E7B215E6E241778FF1F13E /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4C6FD195171E4DBCA6D9FB61 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				5AB5EFA349714149923BC0CC /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00F2389719D342A8A6B4941E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 95643378F4C1485B889BF8DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/CMakeLists.txt */; };
+		0CD2C80E3E5746F7B0E29667 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/quaternion.cpp */ = {isa = PBXBuildFile; fileRef = 81B01686402244199A58ADD1 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/quaternion.cpp */; };
+		16D3EB6075E149089C43A25F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 25A6F4CBBBBC40BDBECB47BB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/CMakeLists.txt */; };
+		20E5BF9CFB2A4813968311CB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = A1145AFF647A42C2835CF363 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/monitor.c */; };
+		21BEB0D65E0944559C93ED23 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = F305672CAB0340CCA193B09E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/window.c */; };
+		246F6D14F9CB48939D077643 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 489A54BD0DD24B09835BE12D /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/CMakeLists.txt */; };
+		2A97C13DA3A34071B409FB7C /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix4x4.cpp */ = {isa = PBXBuildFile; fileRef = 6526F96BB97C4161A0E1A2B4 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix4x4.cpp */; };
+		2C58FE8EC1824D4595890350 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = EC71A82730AF4E0398663CDA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/internal.h */; };
+		3C34EAD14AEF4C6E8C448BB4 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = F6C7E2CC7DFC4DDCB0AB54D6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_init.m */; };
+		40C59F9D9D9D4D0782CAB586 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/path.cpp */ = {isa = PBXBuildFile; fileRef = 0F2EA3FCF27F442D860FA733 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/path.cpp */; };
+		47E62324EDC64B958B4186DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdtext.cpp */ = {isa = PBXBuildFile; fileRef = F1695AF677CC46D693C28238 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdtext.cpp */; };
+		511E994A09D447B889C7EBE6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/viewer.cpp */ = {isa = PBXBuildFile; fileRef = 59C11E1C7BC64A5397DAFBF1 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/viewer.cpp */; };
+		555EAE13608B410096C4FC77 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXBuildFile; fileRef = 05CA06CDADFB4CDD851A8A89 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/visualinfo.c */; };
+		57A16E1600994F4CB25B684B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = DF7A23A770B74010BCFBB693 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.c */; };
+		5AEC0753C9A04D19B444F699 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 7C08F1DE26464754A0A1724B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/input.c */; };
+		5E4FA2E9D72D4AD38CC0E70F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 18D2AE1BEDCE402EAD6931C9 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.m */; };
+		69456022157C4DB1974C3445 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXBuildFile; fileRef = 8D66EC9135544529B8AEBB31 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glewinfo.c */; };
+		6AE995A7D93F43F1B6061827 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 5DA41C4567A641F2A1510F66 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.h */; };
+		6F99838517104CB5BD999291 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = B058DF9E26664587B78404A2 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.h */; };
+		73AE13704D96449CB9212374 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 40629A17046C4BD4A1B60B8F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/init.c */; };
+		7A421F20F02E4A90AC739F20 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector2D.cpp */ = {isa = PBXBuildFile; fileRef = C092F47E04BD495A9F510106 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector2D.cpp */; };
+		8F59F311FABE4F9CAD546549 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = 9963E453E96B41208418CCE6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/mach_time.c */; };
+		978C400B0B11441B81B8F85F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdfont.cpp */ = {isa = PBXBuildFile; fileRef = F95A2488C6594E8CA86801B7 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdfont.cpp */; };
+		98B9BE41F1674B5AB867965C /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/spectrum.cpp */ = {isa = PBXBuildFile; fileRef = 998D4562270E47A0AAF523AA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/spectrum.cpp */; };
+		9F59FE8690214E4199DF19C0 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 2896D242D5D147FFB830961B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3.h */; };
+		BE3BC5F3E16B4D5C9E3A3445 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 8C5EA100B89D432C9E04E6DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_window.m */; };
+		C4C735E8776B4159A47440AB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = EB30579D81DC4324B3B29B6E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/glfw_config.h */; };
+		C52F692854AE417990567931 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/lodepng.cpp */ = {isa = PBXBuildFile; fileRef = 6835233ED52246EF9E4017EB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/lodepng.cpp */; };
+		C84252D8ABB4405FA9DE26A2 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/tinyxml2.cpp */ = {isa = PBXBuildFile; fileRef = 855565B424284D5198E0EC45 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/tinyxml2.cpp */; };
+		CB111583EA6A400C91EFDE85 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix3x3.cpp */ = {isa = PBXBuildFile; fileRef = 9F7B2F41450944BAA40C5E04 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix3x3.cpp */; };
+		CBE0ACF7544A42A58B611447 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector3D.cpp */ = {isa = PBXBuildFile; fileRef = 24FE7233838A40B5BEBE151E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector3D.cpp */; };
+		CD3212A07EA84D7DB6273DF3 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 097A007A3A674F8B82615D6A /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_platform.h */; };
+		D22E51FF12194F1F87DAD0F5 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = 66B125939FE746AEBEB3FC7B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.h */; };
+		D7F1467E4F6C49C8A93CE168 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/base64.cpp */ = {isa = PBXBuildFile; fileRef = 4CD0DD44200940DA94276011 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/base64.cpp */; };
+		DB0D80BF9CB74E76919C2820 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = 9CDC31EC14384895993DA042 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.m */; };
+		DEDF38A75C9541228E335D40 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/color.cpp */ = {isa = PBXBuildFile; fileRef = EA4998CE959644B497D094CB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/color.cpp */; };
+		E447372D354F42639EA9E65B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector4D.cpp */ = {isa = PBXBuildFile; fileRef = 9078CE9D348440B49400DE24 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector4D.cpp */; };
+		E47FB0A062D8462987CBAA0D /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 20D3A19C0D464F969CD5446C /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_monitor.m */; };
+		E8150AF9B3264B12BF5F93E9 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/complex.cpp */ = {isa = PBXBuildFile; fileRef = 0A9C207EF389400AB7A48E37 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/complex.cpp */; };
+		EACBDFBFF7CE4BD9AFA1CB93 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glew.c */ = {isa = PBXBuildFile; fileRef = ABC9A73116E34EB8B28C0A6B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glew.c */; };
+		F09FE757EBA94D31B111D620 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 71FD8CEF129446A3BFE62A4B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3native.h */; };
+		F9D54CBA4CFE43A09CF87867 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 763DE702F10B44098B5ABE63 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/context.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		096E5F3D23C84958A67A207C /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		8AE791B8E4FE44579D488046 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		92CAD94715AF4B1C898FCBD2 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		A828EB3E1F2B4232A193CED2 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		42881AC950ED4BCDBE741712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379B46964CD74841AD092C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FECEE2676244FF85A77D38;
+			remoteInfo = glew;
+		};
+		551BAB23138F4333A6EAD276 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379B46964CD74841AD092C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FECEE2676244FF85A77D38;
+			remoteInfo = glew;
+		};
+		A9EA53A796104550AF5948DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379B46964CD74841AD092C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 014A44DA2FF94A2492B66237;
+			remoteInfo = ALL_BUILD;
+		};
+		E5815C34A10E4E88915378DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379B46964CD74841AD092C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062B084713544B68A9D8026F;
+			remoteInfo = glfw;
+		};
+		F2D3034718374114B07C0E27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379B46964CD74841AD092C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953E3D766D6C49CE9F7AA924;
+			remoteInfo = ZERO_CHECK;
+		};
+		F59878BB6649464A895A4B41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379B46964CD74841AD092C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5092060FB108456A847F4E87;
+			remoteInfo = CGL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05CA06CDADFB4CDD851A8A89 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = visualinfo.c; path = deps/glew/src/visualinfo.c; sourceTree = SOURCE_ROOT; };
+		097A007A3A674F8B82615D6A /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = deps/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		0A9C207EF389400AB7A48E37 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/complex.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = complex.cpp; path = src/complex.cpp; sourceTree = SOURCE_ROOT; };
+		0F2EA3FCF27F442D860FA733 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/path.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = path.cpp; path = src/path.cpp; sourceTree = SOURCE_ROOT; };
+		18D2AE1BEDCE402EAD6931C9 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = deps/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		1C92F23CE1DD420BB4EF1E04 /* CGL */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCGL_osx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		20D3A19C0D464F969CD5446C /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = deps/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		24FE7233838A40B5BEBE151E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector3D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector3D.cpp; path = src/vector3D.cpp; sourceTree = SOURCE_ROOT; };
+		25A6F4CBBBBC40BDBECB47BB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2896D242D5D147FFB830961B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = deps/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		40629A17046C4BD4A1B60B8F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = deps/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		489A54BD0DD24B09835BE12D /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4CD0DD44200940DA94276011 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/base64.cpp; sourceTree = SOURCE_ROOT; };
+		59C11E1C7BC64A5397DAFBF1 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/viewer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = viewer.cpp; path = src/viewer.cpp; sourceTree = SOURCE_ROOT; };
+		5DA41C4567A641F2A1510F66 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = deps/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		602CB521A54C4C749B19D95E /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6526F96BB97C4161A0E1A2B4 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix4x4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix4x4.cpp; path = src/matrix4x4.cpp; sourceTree = SOURCE_ROOT; };
+		66B125939FE746AEBEB3FC7B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = deps/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		6835233ED52246EF9E4017EB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/lodepng.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lodepng.cpp; path = src/lodepng.cpp; sourceTree = SOURCE_ROOT; };
+		6D875B65120148EF9A9E326D /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		71FD8CEF129446A3BFE62A4B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = deps/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		763DE702F10B44098B5ABE63 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = deps/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		7C08F1DE26464754A0A1724B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = deps/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		81B01686402244199A58ADD1 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/quaternion.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = quaternion.cpp; path = src/quaternion.cpp; sourceTree = SOURCE_ROOT; };
+		855565B424284D5198E0EC45 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = src/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+		8C5EA100B89D432C9E04E6DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = deps/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		8D66EC9135544529B8AEBB31 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glewinfo.c; path = deps/glew/src/glewinfo.c; sourceTree = SOURCE_ROOT; };
+		9078CE9D348440B49400DE24 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector4D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector4D.cpp; path = src/vector4D.cpp; sourceTree = SOURCE_ROOT; };
+		95643378F4C1485B889BF8DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glew/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9963E453E96B41208418CCE6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = deps/glfw/src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		998D4562270E47A0AAF523AA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/spectrum.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spectrum.cpp; path = src/spectrum.cpp; sourceTree = SOURCE_ROOT; };
+		9CDC31EC14384895993DA042 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = deps/glfw/src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		9D6FB9C85CA1473F951CE48D /* glew */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglew.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4800596F3340B1A8603DEA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9F7B2F41450944BAA40C5E04 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix3x3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix3x3.cpp; path = src/matrix3x3.cpp; sourceTree = SOURCE_ROOT; };
+		A1145AFF647A42C2835CF363 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = deps/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		ABC9A73116E34EB8B28C0A6B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glew.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glew.c; path = deps/glew/src/glew.c; sourceTree = SOURCE_ROOT; };
+		B058DF9E26664587B78404A2 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = deps/glfw/src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		C092F47E04BD495A9F510106 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector2D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector2D.cpp; path = src/vector2D.cpp; sourceTree = SOURCE_ROOT; };
+		DF7A23A770B74010BCFBB693 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = deps/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		EA4998CE959644B497D094CB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/color.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = color.cpp; path = src/color.cpp; sourceTree = SOURCE_ROOT; };
+		EB30579D81DC4324B3B29B6E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../build/CGL/deps/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		EC71A82730AF4E0398663CDA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = deps/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		F1695AF677CC46D693C28238 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdtext.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdtext.cpp; path = src/osdtext.cpp; sourceTree = SOURCE_ROOT; };
+		F305672CAB0340CCA193B09E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = deps/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		F6C7E2CC7DFC4DDCB0AB54D6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = deps/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		F95A2488C6594E8CA86801B7 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdfont.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdfont.cpp; path = src/osdfont.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		08D8138156E64D4D92EB64A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C92F23CE1DD420BB4EF1E04 /* CGL */,
+				9D6FB9C85CA1473F951CE48D /* glew */,
+				602CB521A54C4C749B19D95E /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F2529455E0A4EC0BE18804F /* CGL */ = {
+			isa = PBXGroup;
+			children = (
+				4A3B3355D1964840AF3ED87B /* Source Files */,
+				25A6F4CBBBBC40BDBECB47BB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/CMakeLists.txt */,
+			);
+			name = CGL;
+			sourceTree = "<group>";
+		};
+		4A3B3355D1964840AF3ED87B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CD0DD44200940DA94276011 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/base64.cpp */,
+				EA4998CE959644B497D094CB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/color.cpp */,
+				0A9C207EF389400AB7A48E37 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/complex.cpp */,
+				6835233ED52246EF9E4017EB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/lodepng.cpp */,
+				9F7B2F41450944BAA40C5E04 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix3x3.cpp */,
+				6526F96BB97C4161A0E1A2B4 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix4x4.cpp */,
+				F95A2488C6594E8CA86801B7 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdfont.cpp */,
+				F1695AF677CC46D693C28238 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdtext.cpp */,
+				0F2EA3FCF27F442D860FA733 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/path.cpp */,
+				81B01686402244199A58ADD1 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/quaternion.cpp */,
+				998D4562270E47A0AAF523AA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/spectrum.cpp */,
+				855565B424284D5198E0EC45 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/tinyxml2.cpp */,
+				C092F47E04BD495A9F510106 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector2D.cpp */,
+				24FE7233838A40B5BEBE151E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector3D.cpp */,
+				9078CE9D348440B49400DE24 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector4D.cpp */,
+				59C11E1C7BC64A5397DAFBF1 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/viewer.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5389C26B40EB438C9A321007 /* glew */ = {
+			isa = PBXGroup;
+			children = (
+				8D46413FD6F64207AA206C17 /* Source Files */,
+				95643378F4C1485B889BF8DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/CMakeLists.txt */,
+			);
+			name = glew;
+			sourceTree = "<group>";
+		};
+		59FED08A23844426A3AA74D2 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		5A76C0DEC2A94045A587D331 = {
+			isa = PBXGroup;
+			children = (
+				94CC786149A54BC5826940AB /* ALL_BUILD */,
+				5389C26B40EB438C9A321007 /* glew */,
+				610705C8F8E944A799C582AE /* uninstall */,
+				A5ACBF6AC54D4F55BD1A49A6 /* GLFW3 */,
+				1F2529455E0A4EC0BE18804F /* CGL */,
+				08D8138156E64D4D92EB64A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		610705C8F8E944A799C582AE /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				59FED08A23844426A3AA74D2 /* CMake Rules */,
+				6D875B65120148EF9A9E326D /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		88769369F6274EE3A189AC56 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				2896D242D5D147FFB830961B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3.h */,
+				71FD8CEF129446A3BFE62A4B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/include/GLFW/glfw3native.h */,
+				097A007A3A674F8B82615D6A /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_platform.h */,
+				EC71A82730AF4E0398663CDA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/internal.h */,
+				66B125939FE746AEBEB3FC7B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.h */,
+				5DA41C4567A641F2A1510F66 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.h */,
+				B058DF9E26664587B78404A2 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.h */,
+				EB30579D81DC4324B3B29B6E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src/glfw_config.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		8D46413FD6F64207AA206C17 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABC9A73116E34EB8B28C0A6B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glew.c */,
+				8D66EC9135544529B8AEBB31 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glewinfo.c */,
+				05CA06CDADFB4CDD851A8A89 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/visualinfo.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		94CC786149A54BC5826940AB /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F7400F806D03424A9E1AB0FA /* CMake Rules */,
+				9F4800596F3340B1A8603DEA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		9F764B7DE20E498CA23479C9 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				F59E6DD756FD4D4093D9B5C2 /* Source Files */,
+				88769369F6274EE3A189AC56 /* Header Files */,
+				489A54BD0DD24B09835BE12D /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		A5ACBF6AC54D4F55BD1A49A6 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				9F764B7DE20E498CA23479C9 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		F59E6DD756FD4D4093D9B5C2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6C7E2CC7DFC4DDCB0AB54D6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_init.m */,
+				20D3A19C0D464F969CD5446C /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_monitor.m */,
+				8C5EA100B89D432C9E04E6DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_window.m */,
+				763DE702F10B44098B5ABE63 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/context.c */,
+				40629A17046C4BD4A1B60B8F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/init.c */,
+				7C08F1DE26464754A0A1724B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/input.c */,
+				9CDC31EC14384895993DA042 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.m */,
+				9963E453E96B41208418CCE6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/mach_time.c */,
+				A1145AFF647A42C2835CF363 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/monitor.c */,
+				18D2AE1BEDCE402EAD6931C9 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.m */,
+				DF7A23A770B74010BCFBB693 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.c */,
+				F305672CAB0340CCA193B09E /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		F7400F806D03424A9E1AB0FA /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		062B084713544B68A9D8026F /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B6D392179744B57AFE52A98 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				9F2B9A20829D43B0BFE5024E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 602CB521A54C4C749B19D95E /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5092060FB108456A847F4E87 /* CGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E4F26533F6F47729E150C39 /* Build configuration list for PBXNativeTarget "CGL" */;
+			buildPhases = (
+				35C8AEB4282A48F891BB782A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				055DF47B432E45F9B8FC8663 /* PBXTargetDependency */,
+			);
+			name = CGL;
+			productName = CGL;
+			productReference = 1C92F23CE1DD420BB4EF1E04 /* CGL */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D4FECEE2676244FF85A77D38 /* glew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0545030BA19A4296889F34A1 /* Build configuration list for PBXNativeTarget "glew" */;
+			buildPhases = (
+				FAA8E9BC44CE4D038C8B2DAA /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glew;
+			productName = glew;
+			productReference = 9D6FB9C85CA1473F951CE48D /* glew */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		379B46964CD74841AD092C00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 86FEDE74FB3D4AEBBDBA3E4F /* Build configuration list for PBXProject "CGL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				A828EB3E1F2B4232A193CED2 /* Debug */,
+				92CAD94715AF4B1C898FCBD2 /* Release */,
+				096E5F3D23C84958A67A207C /* MinSizeRel */,
+				8AE791B8E4FE44579D488046 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 5A76C0DEC2A94045A587D331;
+			projectDirPath = ../../CGL;
+			projectRoot = "";
+			targets = (
+				014A44DA2FF94A2492B66237 /* ALL_BUILD */,
+				5092060FB108456A847F4E87 /* CGL */,
+				953E3D766D6C49CE9F7AA924 /* ZERO_CHECK */,
+				D4FECEE2676244FF85A77D38 /* glew */,
+				062B084713544B68A9D8026F /* glfw */,
+				A485F7B77EED4B98BD69CFD0 /* install */,
+				F5E7B215E6E241778FF1F13E /* uninstall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A1B299883174010AB6FAC2F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		50C1D420240E49D285625699 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		5AB5EFA349714149923BC0CC /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		70DA09353D854A558DFA9813 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		76D40135A54D4E9F9A44225E = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		BE228040BAE24675A0F4EA21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C1D1CB9D20514A0293CF10BD = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		FCBBCBDC2F1B4AD3B9E0F050 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL -f /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35C8AEB4282A48F891BB782A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F1467E4F6C49C8A93CE168 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/base64.cpp */,
+				DEDF38A75C9541228E335D40 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/color.cpp */,
+				E8150AF9B3264B12BF5F93E9 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/complex.cpp */,
+				C52F692854AE417990567931 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/lodepng.cpp */,
+				CB111583EA6A400C91EFDE85 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix3x3.cpp */,
+				2A97C13DA3A34071B409FB7C /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/matrix4x4.cpp */,
+				978C400B0B11441B81B8F85F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdfont.cpp */,
+				47E62324EDC64B958B4186DA /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/osdtext.cpp */,
+				40C59F9D9D9D4D0782CAB586 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/path.cpp */,
+				0CD2C80E3E5746F7B0E29667 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/quaternion.cpp */,
+				98B9BE41F1674B5AB867965C /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/spectrum.cpp */,
+				C84252D8ABB4405FA9DE26A2 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/tinyxml2.cpp */,
+				7A421F20F02E4A90AC739F20 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector2D.cpp */,
+				CBE0ACF7544A42A58B611447 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector3D.cpp */,
+				E447372D354F42639EA9E65B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/vector4D.cpp */,
+				511E994A09D447B889C7EBE6 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/src/viewer.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F2B9A20829D43B0BFE5024E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C34EAD14AEF4C6E8C448BB4 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_init.m */,
+				E47FB0A062D8462987CBAA0D /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_monitor.m */,
+				BE3BC5F3E16B4D5C9E3A3445 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/cocoa_window.m */,
+				F9D54CBA4CFE43A09CF87867 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/context.c */,
+				73AE13704D96449CB9212374 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/init.c */,
+				5AEC0753C9A04D19B444F699 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/input.c */,
+				DB0D80BF9CB74E76919C2820 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/iokit_joystick.m */,
+				8F59F311FABE4F9CAD546549 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/mach_time.c */,
+				20E5BF9CFB2A4813968311CB /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/monitor.c */,
+				5E4FA2E9D72D4AD38CC0E70F /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/nsgl_context.m */,
+				57A16E1600994F4CB25B684B /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/posix_tls.c */,
+				21BEB0D65E0944559C93ED23 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA8E9BC44CE4D038C8B2DAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACBDFBFF7CE4BD9AFA1CB93 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glew.c */,
+				69456022157C4DB1974C3445 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/glewinfo.c */,
+				555EAE13608B410096C4FC77 /* /Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/src/visualinfo.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		055DF47B432E45F9B8FC8663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FECEE2676244FF85A77D38 /* glew */;
+			targetProxy = 42881AC950ED4BCDBE741712 /* PBXContainerItemProxy */;
+		};
+		1E03BA2741FC475ABF797CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953E3D766D6C49CE9F7AA924 /* ZERO_CHECK */;
+			targetProxy = F2D3034718374114B07C0E27 /* PBXContainerItemProxy */;
+		};
+		7B7AA8D988384283BA7A3F75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FECEE2676244FF85A77D38 /* glew */;
+			targetProxy = 551BAB23138F4333A6EAD276 /* PBXContainerItemProxy */;
+		};
+		8C418E36BAC043C2B38FC729 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 062B084713544B68A9D8026F /* glfw */;
+			targetProxy = E5815C34A10E4E88915378DD /* PBXContainerItemProxy */;
+		};
+		D5BC05A5394143D3BF9FD719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5092060FB108456A847F4E87 /* CGL */;
+			targetProxy = F59878BB6649464A895A4B41 /* PBXContainerItemProxy */;
+		};
+		DBBAC9B5DDAD4210A2307036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 014A44DA2FF94A2492B66237 /* ALL_BUILD */;
+			targetProxy = A9EA53A796104550AF5948DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000DA87AB423488AB5DDAD08 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		011733E556114FF38C8C0790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		02C42E922A5247439DDF0246 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		0AC5E297916B4A11B4259B39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		0AE35ACD28A24B4BA2A30754 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/build";
+			};
+			name = RelWithDebInfo;
+		};
+		0C5FCB159ED34D81A4550EF7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		0F3A0C1EB190418C80D1D1B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		240994D449F64B08AAD8CE15 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		267FC53B7B844875B4810033 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2D617BE528A04CC09137DE00 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2D69E2ABC62846FDA2E0918D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		30A24D4191A946DF8BA93CE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		41D9A3337815474AA03408D9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		44AC7B4DD48C455987CFE0D3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/build";
+			};
+			name = MinSizeRel;
+		};
+		49603CD56FC741EE850AF713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		4A4DBF78D18F43DE97F76891 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register     -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4E1A77A31BEC4690A0B1A4B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		653DCB3C6A784852B5C47E87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		759BC303E3C94B22B832C9D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7FF739857789496795E730A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register     -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8FCBF78196584FC8A4B1B04A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9B3278F6B3594F12B7DCE91E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/build";
+			};
+			name = Debug;
+		};
+		9CF58C78173A42258CA7B6E1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A158E50581A54E5C9B848288 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C2BE2EF167AF444990D64D54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C6D3FF0E38E542C28D99CD8C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register        -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CA5E916E372F4048B9B40755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D2BB5F62A4184229BB55DC88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		DE7080CBF785496381BE26B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/build";
+			};
+			name = Release;
+		};
+		E841AA9C93F941C092F802B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register    -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F494FB3255C74ABBB2FE92B5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F4FD40817A964080BAC06DAF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/CGL/deps/glfw/src","/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/fjm/Downloads/p3-1-pathtracer-ffjmmm-master/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0545030BA19A4296889F34A1 /* Build configuration list for PBXNativeTarget "glew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F3A0C1EB190418C80D1D1B8 /* Debug */,
+				759BC303E3C94B22B832C9D5 /* Release */,
+				0C5FCB159ED34D81A4550EF7 /* MinSizeRel */,
+				000DA87AB423488AB5DDAD08 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4C6FD195171E4DBCA6D9FB61 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC5E297916B4A11B4259B39 /* Debug */,
+				CA5E916E372F4048B9B40755 /* Release */,
+				9CF58C78173A42258CA7B6E1 /* MinSizeRel */,
+				2D69E2ABC62846FDA2E0918D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4E4F26533F6F47729E150C39 /* Build configuration list for PBXNativeTarget "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E841AA9C93F941C092F802B8 /* Debug */,
+				7FF739857789496795E730A1 /* Release */,
+				4A4DBF78D18F43DE97F76891 /* MinSizeRel */,
+				C6D3FF0E38E542C28D99CD8C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5B6D392179744B57AFE52A98 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2BB5F62A4184229BB55DC88 /* Debug */,
+				653DCB3C6A784852B5C47E87 /* Release */,
+				267FC53B7B844875B4810033 /* MinSizeRel */,
+				F4FD40817A964080BAC06DAF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7EF71DC97CB34A7C8D415D95 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49603CD56FC741EE850AF713 /* Debug */,
+				011733E556114FF38C8C0790 /* Release */,
+				F494FB3255C74ABBB2FE92B5 /* MinSizeRel */,
+				41D9A3337815474AA03408D9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		86FEDE74FB3D4AEBBDBA3E4F /* Build configuration list for PBXProject "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B3278F6B3594F12B7DCE91E /* Debug */,
+				DE7080CBF785496381BE26B7 /* Release */,
+				44AC7B4DD48C455987CFE0D3 /* MinSizeRel */,
+				0AE35ACD28A24B4BA2A30754 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		970E047FE1CE41A5BCB88151 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCBF78196584FC8A4B1B04A /* Debug */,
+				C2BE2EF167AF444990D64D54 /* Release */,
+				2D617BE528A04CC09137DE00 /* MinSizeRel */,
+				02C42E922A5247439DDF0246 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9E910827078A43DC859C02EF /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E1A77A31BEC4690A0B1A4B3 /* Debug */,
+				30A24D4191A946DF8BA93CE5 /* Release */,
+				240994D449F64B08AAD8CE15 /* MinSizeRel */,
+				A158E50581A54E5C9B848288 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 379B46964CD74841AD092C00 /* Project object */;
+}
