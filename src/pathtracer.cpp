@@ -625,7 +625,7 @@ Spectrum PathTracer::at_least_one_bounce_radiance(const Ray&r, const Intersectio
     Spectrum sp = isect.bsdf -> sample_f(w_out, &w_in, &pdf);
     
     float rrp = 0.7;
-    if (coin_flip(rrp) || r.depth < max_ray_depth) {
+    if (coin_flip(rrp) && r.depth < max_ray_depth) {
         Vector3D wi = o2w * w_in;
         Ray shadow_ray = Ray(EPS_D * wi + hit_p, wi);
         shadow_ray.depth = r.depth + 1;
