@@ -1,5 +1,5 @@
 <center>
-#CS 184: Project 2 Mesh Editor
+#CS 184: Project 3-1 Pathtracer
 
 ###Jieming Fan 3034504370
 </center>
@@ -44,7 +44,6 @@ Then, check the validation of *t*, *b1* and *b2*. The validation check  includes
         <figcaption align="middle">cow.dae</figcaption>
       </td>
     </tr>
-    <br>
     <tr>
       <td>
         <img src="images/P1/beetle.png" align="middle" width="400px"/>
@@ -89,7 +88,6 @@ Then, check the validation of *t*, *b1* and *b2*. The validation check  includes
         <figcaption align="middle">blob.dae</figcaption>
       </td>
     </tr>
-    <br>
     <tr>
       <td>
         <img src="images/P2/CBlucy.png" align="middle" width="400px"/>
@@ -157,7 +155,6 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
         <figcaption align="middle">CBbunny.dae with light sampling s=16 l=8 </figcaption>
       </td>
     </tr>
-    <br>
     <tr>
       <td>
         <img src="images/P3/CBbunny_64_32_H.png" align="middle" width="400px"/>
@@ -204,7 +201,6 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
         <figcaption align="middle">dragon.dae with light sampling s=1 l=4</figcaption>
       </td>
     </tr>
-    <br>
     <tr>
       <td>
         <img src="images/P3/dragon_1_16.png" align="middle" width="400px"/>
@@ -231,7 +227,6 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
         <figcaption align="middle">CBbunny.dae with light sampling s=16 l=8 </figcaption>
       </td>
     </tr>
-    <br>
     <tr>
       <td>
         <img src="images/P3/CBbunny_64_32_H.png" align="middle" width="400px"/>
@@ -251,6 +246,123 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
 1. Walk through your implementation of the indirect lighting function.
 
 	+ Complete the function ```PathTracer::est_radiance_global_illumination```, which is used to get an estimate of the total radiance with global illumination arriving at a point from a particular direction. We need to add the direct illumination calculated by the function ```PathTracer::zero_bounce_radiance``` and the indirect illumination calculated by the function ```PathTracer::at_least_one_bounce_radiance``` together to get the total radiance.
+	+ Function ```PathTracer::zero_bounce_radiance``` simply return the light emitted by the given point and outgoing direction.
+	+ Function ```PathTracer::at_least_one_bounce_radiance``` will call the function ```PathTracer::one_bounce_radiance``` which is the direct illumination, and then recursively call itself to estimate the higher bounces. In this function, we use Russian roulette and ```max_ray_depth``` to terminate the ray. 
 
-	
 2. Show some images rendered with global (direct and indirect) illumination. Use 1024 samples per pixel.
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/P4/CBspheres_lambertian_1024_16_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBspheres\_lambertian.dae s=1024 l=16 m=5 </figcaption>
+      </td>
+      <td>
+        <img src="images/P4/CBbunny_1024_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=3 </figcaption>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="images/P4/banana_1024_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">banana.dae s=1024 l=4 m=3 </figcaption>      
+      </td>
+      <td>
+        <img src="images/P4/dragon_1024_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=1024 l=4 m=3 </figcaption> 
+      </td>
+    </tr> 
+  </table>
+</div>
+
+3. Pick one scene and compare rendered views first with only direct illumination, then only indirect illumination. (You'll have to edit ```at_least_one_bounce_radiance``` in your code to generate these.) Use 1024 samples per pixel.
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/P4/banana_1024_4_3_D.png" align="middle" width="400px"/>
+        <figcaption align="middle">banana.dae with only direct illumination s=1024 l=4 m=3 </figcaption>
+      </td>
+      <td>
+        <img src="images/P4/banana_1024_4_3_IN.png" align="middle" width="400px"/>
+        <figcaption align="middle">banana.dae with only indirect illumination s=1024 l=4 m=3 </figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+4. For ```CBbunny.dae```, compare rendered views with ```max_ray_depth``` equal to 0, 1, 2, 3, and 100 (the -m flag). Use 1024 samples per pixel.
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/P4/CBbunny_1024_4_0.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=0 </figcaption>
+      </td>
+      <td>
+        <img src="images/P4/CBbunny_1024_4_1.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=1 </figcaption>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="images/P4/CBbunny_1024_4_2.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=2 </figcaption>      
+      </td>
+      <td>
+        <img src="images/P4/CBbunny_1024_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=3 </figcaption> 
+      </td>
+    </tr> 
+    <tr>
+      <td>
+        <img src="images/P4/CBbunny_1024_4_100.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=100 </figcaption>      
+      </td>
+    </tr>
+  </table>
+</div>
+
+5. Pick one scene and compare rendered views with various sample-per-pixel rates, including at least 1, 2, 4, 8, 16, 64, and 1024. Use 4 light rays.
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/P4/dragon_1_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=1 l=4 m=3 </figcaption>
+      </td>
+      <td>
+        <img src="images/P4/dragon_2_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=2 l=4 m=3 </figcaption>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="images/P4/dragon_4_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=4 l=4 m=3 </figcaption>      
+      </td>
+      <td>
+        <img src="images/P4/dragon_8_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=8 l=4 m=3  </figcaption> 
+      </td>
+    </tr> 
+    <tr>
+      <td>
+        <img src="images/P4/dragon_16_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=16 l=4 m=3 </figcaption>      
+      </td>
+      <td>
+        <img src="images/P4/dragon_64_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=64 l=4 m=3  </figcaption> 
+      </td>
+    </tr> 
+    <tr>
+      <td>
+        <img src="images/P4/dragon_1024_4_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=1024 l=4 m=3 </figcaption>      
+      </td>
+    </tr>
+  </table>
+</div>
+
+###Part 5: Adaptive Sampling

@@ -685,6 +685,7 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
     Vector2D origin = Vector2D(x,y);    // bottom left corner of the pixel
     
     Spectrum resSpectrum;
+    double s1 = 0.0, s2 = 0.0;
     if (num_samples == 1) {
         Ray r = camera -> generate_ray(((double)x + 0.5) / (double)sampleBuffer.w, ((double)y + 0.5) / (double)sampleBuffer.h);
         resSpectrum = est_radiance_global_illumination(r);
@@ -694,7 +695,18 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
         for (int i = 0; i < num_samples; i ++) {
             Vector2D sample = gridSampler -> get_sample() + origin;
             Ray r = camera -> generate_ray((double)sample.x / (double)sampleBuffer.w, (double)sample.y / (double)sampleBuffer.h);
-            total += est_radiance_global_illumination(r);
+            Spectrum sp = est_radiance_global_illumination(r);
+            total += sp;
+            s1 += sp.illum();
+            s2 += sp.illum() * sp.illum();
+            if ((i + 1) % samplesPerBatch == 0) {
+                double u = s1 / (double)(i + 1);
+                double I = 1.96 * sqrt((1 / (double)(i)) * (s2 - (s1 * s1) / (double)(i + 1))) / sqrt(i + 1);
+                if (I <= maxTolerance * u) {
+                    sampleCountBuffer[x + y * sampleBuffer.w] = i + 1;
+                    return total / (i + 1);
+                }
+            }
         }
         resSpectrum = total / num_samples;
     }
