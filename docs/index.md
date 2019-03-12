@@ -5,7 +5,7 @@
 </center>
 ---
 ## Overview
-
+In this project, I explored ray generation, ray-scene intersection, the algorithm to accelerate ray-scene intersecion, direct illumination, global illumination, and adaptive sampling. It's really a complex but exciting project, especially when I saw the images which are rendered correctly becoming more and more realistic. I also understand more about the various algorithms I learned in class by working at this project.
 
 ### Part 1: Ray Generation and Scene Intersection
 
@@ -366,3 +366,31 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
 </div>
 
 ###Part 5: Adaptive Sampling
+
+1. Walk through your implementation of the adaptive sampling.
+
+	+ In order to calculate the variable *I*, which is used to measure the pixel's convergence, we need to get the mean and variance of all samples. The mean and variance could be calculated by the following formulas:
+<p align="middle"><pre align="middle">S1 = x1 + x2 + x3 + ... + xn;
+S2 = x1^2 + x2^2 + x3^2 + ... + xn^2;
+mean = s1 / n;
+variance = 1 / (n - 1) * (s2 - s1^2 / n);</pre></p>
+	+ Use the statistics to calculate *I*, the formula is:
+<p align="middle"><pre align="middle">I = 1.96 * sqrt(variance / n)</pre></p>
+The number 1.96 here comes from the 95% confidence.
+	+ Check the condition ```I <= maxTolerance * mean``` where ```maxTolerance = 0.05``` by default. If the condition is satisfied, we can assume that the pixel has converged, and stop tracing more rays for this pixel.
+
+2. Pick one scene and render it with the maximum number of samples per pixel at least 2048. Show a good sampling rate image with clearly visible differences in sampling rate over various regions and pixels. Include both your sample rate image (which shows your how your adaptive sampling changes depending on which part of the image we are rendering) and your noise-free rendered result. Use 1 sample per light and at least 5 for max ray depth.
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/P5/bunny.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=2048 l=1 m=5 </figcaption>
+      </td>
+      <td>
+        <img src="images/P5/bunny_rate.png" align="middle" width="400px"/>
+        <figcaption align="middle">rate image </figcaption>
+      </td>
+    </tr>
+  </table>
+</div>

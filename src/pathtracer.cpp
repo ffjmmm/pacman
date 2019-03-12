@@ -625,7 +625,7 @@ Spectrum PathTracer::at_least_one_bounce_radiance(const Ray&r, const Intersectio
     Spectrum sp = isect.bsdf -> sample_f(w_out, &w_in, &pdf);
     
     float rrp = 0.7;
-    if ((coin_flip(rrp) || r.depth == 1) && r.depth < max_ray_depth) {
+    if (coin_flip(rrp) && r.depth < max_ray_depth) {
         Vector3D wi = o2w * w_in;
         Ray shadow_ray = Ray(EPS_D * wi + hit_p, wi);
         shadow_ray.depth = r.depth + 1;
@@ -699,6 +699,7 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
             total += sp;
             s1 += sp.illum();
             s2 += sp.illum() * sp.illum();
+            /*
             if ((i + 1) % samplesPerBatch == 0) {
                 double u = s1 / (double)(i + 1);
                 double I = 1.96 * sqrt((1 / (double)(i)) * (s2 - (s1 * s1) / (double)(i + 1))) / sqrt(i + 1);
@@ -707,6 +708,7 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
                     return total / (i + 1);
                 }
             }
+            */
         }
         resSpectrum = total / num_samples;
     }
