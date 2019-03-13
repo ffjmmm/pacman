@@ -258,18 +258,18 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
         <figcaption align="middle">CBspheres\_lambertian.dae s=1024 l=16 m=5 </figcaption>
       </td>
       <td>
-        <img src="images/P4/CBbunny_1024_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=3 </figcaption>
+        <img src="images/P4/CBbunny_1024_16_100.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=16 m=100 </figcaption>
       </td>
     </tr>
     <tr>
       <td>
-        <img src="images/P4/banana_1024_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">banana.dae s=1024 l=4 m=3 </figcaption>      
+        <img src="images/P4/banana_1024_16_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">banana.dae s=1024 l=16 m=5 </figcaption>      
       </td>
       <td>
-        <img src="images/P4/dragon_1024_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=1024 l=4 m=3 </figcaption> 
+        <img src="images/P4/dragon_1024_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=1024 l=4 m=5 </figcaption> 
       </td>
     </tr> 
   </table>
@@ -280,12 +280,13 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
   <table style="width=100%">
     <tr>
       <td>
-        <img src="images/P4/banana_1024_4_3_D.png" align="middle" width="400px"/>
-        <figcaption align="middle">banana.dae with only direct illumination s=1024 l=4 m=3 </figcaption>
+        <img src="images/P4/banana_1024_16_5_direct.png" align="middle" width="400px"/>
+        <figcaption align="middle">banana.dae with only direct illumination s=1024 l=16 m=5 </figcaption>
       </td>
+      
       <td>
-        <img src="images/P4/banana_1024_4_3_IN.png" align="middle" width="400px"/>
-        <figcaption align="middle">banana.dae with only indirect illumination s=1024 l=4 m=3 </figcaption>
+        <img src="images/P4/banana_1024_16_5_indirect.png" align="middle" width="400px"/>
+        <figcaption align="middle">banana.dae with only indirect illumination s=1024 l=16 m=5 </figcaption>
       </td>
     </tr>
   </table>
@@ -300,24 +301,24 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
         <figcaption align="middle">CBbunny.dae s=1024 l=4 m=0 </figcaption>
       </td>
       <td>
-        <img src="images/P4/CBbunny_1024_4_1.png" align="middle" width="400px"/>
-        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=1 </figcaption>
+        <img src="images/P4/CBbunny_1024_16_1.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=16 m=1 </figcaption>
       </td>
     </tr>
     <tr>
       <td>
-        <img src="images/P4/CBbunny_1024_4_2.png" align="middle" width="400px"/>
-        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=2 </figcaption>      
+        <img src="images/P4/CBbunny_1024_16_2.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=16 m=2 </figcaption>      
       </td>
       <td>
-        <img src="images/P4/CBbunny_1024_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=3 </figcaption> 
+        <img src="images/P4/CBbunny_1024_16_3.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=16 m=3 </figcaption> 
       </td>
     </tr> 
     <tr>
       <td>
-        <img src="images/P4/CBbunny_1024_4_100.png" align="middle" width="400px"/>
-        <figcaption align="middle">CBbunny.dae s=1024 l=4 m=100 </figcaption>      
+        <img src="images/P4/CBbunny_1024_16_100.png" align="middle" width="400px"/>
+        <figcaption align="middle">CBbunny.dae s=1024 l=16 m=100 </figcaption>      
       </td>
     </tr>
   </table>
@@ -328,38 +329,38 @@ By using the BVH intersection algorithm, we could avoid checking every primitive
   <table style="width=100%">
     <tr>
       <td>
-        <img src="images/P4/dragon_1_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=1 l=4 m=3 </figcaption>
+        <img src="images/P4/dragon_1_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=1 l=4 m=5 </figcaption>
       </td>
       <td>
-        <img src="images/P4/dragon_2_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=2 l=4 m=3 </figcaption>
+        <img src="images/P4/dragon_2_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=2 l=4 m=5 </figcaption>
       </td>
     </tr>
     <tr>
       <td>
-        <img src="images/P4/dragon_4_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=4 l=4 m=3 </figcaption>      
+        <img src="images/P4/dragon_4_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=4 l=4 m=5 </figcaption>      
       </td>
       <td>
-        <img src="images/P4/dragon_8_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=8 l=4 m=3  </figcaption> 
-      </td>
-    </tr> 
-    <tr>
-      <td>
-        <img src="images/P4/dragon_16_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=16 l=4 m=3 </figcaption>      
-      </td>
-      <td>
-        <img src="images/P4/dragon_64_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=64 l=4 m=3  </figcaption> 
+        <img src="images/P4/dragon_8_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=8 l=4 m=5  </figcaption> 
       </td>
     </tr> 
     <tr>
       <td>
-        <img src="images/P4/dragon_1024_4_3.png" align="middle" width="400px"/>
-        <figcaption align="middle">dragon.dae s=1024 l=4 m=3 </figcaption>      
+        <img src="images/P4/dragon_16_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=16 l=4 m=5 </figcaption>      
+      </td>
+      <td>
+        <img src="images/P4/dragon_64_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=64 l=4 m=5 </figcaption> 
+      </td>
+    </tr> 
+    <tr>
+      <td>
+        <img src="images/P4/dragon_1024_4_5.png" align="middle" width="400px"/>
+        <figcaption align="middle">dragon.dae s=1024 l=4 m=5 </figcaption>      
       </td>
     </tr>
   </table>
@@ -385,7 +386,7 @@ The number 1.96 here comes from the 95% confidence.
     <tr>
       <td>
         <img src="images/P5/bunny.png" align="middle" width="400px"/>
-        <figcaption align="middle">CBbunny.dae s=2048 l=1 m=5 </figcaption>
+        <figcaption align="middle">CBbunny.dae s=2048 l=1 m=5 with continuation probability 0.7</figcaption>
       </td>
       <td>
         <img src="images/P5/bunny_rate.png" align="middle" width="400px"/>
