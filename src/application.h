@@ -58,6 +58,9 @@ struct AppConfig {
     pathtracer_direct_hemisphere_sample = false;
 
     pathtracer_filename = "";
+    pathtracer_lensRadius = 0.25;
+    pathtracer_focalDistance = 4.7;
+
   }
 
   size_t pathtracer_ns_aa;
@@ -77,6 +80,8 @@ struct AppConfig {
   bool pathtracer_direct_hemisphere_sample;
 
   string pathtracer_filename;
+  double pathtracer_lensRadius;
+  double pathtracer_focalDistance;
 };
 
 class Application : public Renderer {
@@ -128,6 +133,8 @@ class Application : public Renderer {
   // orientation are reset but NOT the aspect ratio.
   Camera camera;
   Camera canonicalCamera;
+  // LensCamera camera;
+  // LensCamera canonicalCamera;
 
   size_t screenW;
   size_t screenH;

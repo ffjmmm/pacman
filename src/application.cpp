@@ -32,7 +32,9 @@ Application::Application(AppConfig config, bool gl) {
     config.pathtracer_max_tolerance,
     config.pathtracer_envmap,
     config.pathtracer_direct_hemisphere_sample,
-    config.pathtracer_filename
+    config.pathtracer_filename,
+    config.pathtracer_lensRadius,
+    config.pathtracer_focalDistance
   );
   filename = config.pathtracer_filename;
 }
@@ -146,6 +148,7 @@ void Application::render() {
       if (show_coordinates) draw_coordinates();
     case RENDER_MODE:
       pathtracer->update_screen();
+
       break;
   }
 }
@@ -431,17 +434,25 @@ void Application::keyboard_event(int key, int event, unsigned char mods) {
           case '.': case '>':
           case ',': case '<':
           case 'h': case 'H':
+          case 'q': case 'Q': case 'W': case 'w': 
+          case 'z': case 'x': case 'Z': case 'X':
+          case ';': case '\'': 
+          case '0': case '1': case '2': case '3': case '4':
             pathtracer->stop();
             pathtracer->key_press(key);
             pathtracer->start_raytracing();
             break;
+
+          case 'F': case 'A':
           case 'C': 
             pathtracer->key_press(key);
             break;
+
           case 'r': case 'R':
             pathtracer->stop();
             pathtracer->start_raytracing();
             break;
+
           case 'd': case 'D':
             camera.dump_settings(filename + "_cam_settings.txt");
             break;

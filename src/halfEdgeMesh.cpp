@@ -27,8 +27,7 @@ Vector3D Face::normal(void) const {
 }
 
 void HalfedgeMesh::build(const vector<vector<Index> >& polygons,
-                         const vector<Vector3D>& vertexPositions,
-                         const vector<Vector2D>& texcoords)
+                         const vector<Vector3D>& vertexPositions)
 // This method initializes the halfedge data structure from a raw list of
 // polygons, where each input polygon is specified as a list of vertex indices.
 // The input must describe a manifold, oriented surface, where the orientation
@@ -387,12 +386,6 @@ void HalfedgeMesh::build(const vector<vector<Index> >& polygons,
     // set the att of this vertex to the corresponding
     // position in the input
     v->position = vertexPositions[i];
-
-    if (texcoords.size() > i) {
-        v->texcoord = texcoords[i];
-//        printf("%f %f\n", v->texcoord.x, v->texcoord.y);
-    }
-
     i++;
   }
 

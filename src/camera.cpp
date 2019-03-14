@@ -5,6 +5,7 @@
 #include <fstream>
 
 #include "CGL/misc.h"
+#include "CGL/vector2D.h"
 #include "CGL/vector3D.h"
 
 using std::cout;
@@ -60,6 +61,8 @@ void Camera::copy_placement(const Camera& other) {
   minR = other.minR;
   maxR = other.maxR;
   c2w = other.c2w;
+  nClip = other.nClip;
+  fClip = other.fClip;
 }
 
 void Camera::set_screen_size(const size_t screenW, const size_t screenH) {
@@ -115,6 +118,23 @@ void Camera::compute_position() {
                                  // to the world space view direction
 }
 
+  // double hFov, vFov, ar, nClip, fClip;
+
+  // // Current position and target point (the point the camera is looking at).
+  // Vector3D pos, targetPos;
+
+  // // Orientation relative to target, and min & max distance from the target.
+  // double phi, theta, r, minR, maxR;
+
+  // // camera-to-world rotation matrix (note: also need to translate a
+  // // camera-space point by 'pos' to perform a full camera-to-world
+  // // transform)
+  // Matrix3x3 c2w;
+
+  // // Info about screen to render to; it corresponds to the camera's full field
+  // // of view at some distance.
+  // size_t screenW, screenH;
+  // double screenDist;
 void Camera::dump_settings(string filename) {
   ofstream file(filename);
   file << hFov << " " << vFov << " " << ar << " " << nClip << " " << fClip << endl;
@@ -128,6 +148,7 @@ void Camera::dump_settings(string filename) {
     file << c2w(i/3, i%3) << " ";
   file << endl;
   file << screenW << " " << screenH << " " << screenDist << endl;
+  file << focalDistance << " " << lensRadius << endl;
   cout << "[Camera] Dumped settings to " << filename << endl;
 }
 
@@ -143,25 +164,18 @@ void Camera::load_settings(string filename) {
   for (int i = 0; i < 9; ++i)
     file >> c2w(i/3, i%3);
   file >> screenW >> screenH >> screenDist;
+  file >> focalDistance >> lensRadius;
   cout << "[Camera] Loaded settings from " << filename << endl;
 }
 
-Ray Camera::generate_ray(double x, double y) const {
 
-  // TODO (Part 1.2):
-  // compute position of the input sensor sample coordinate on the
-  // canonical sensor plane one unit away from the pinhole.
-  // Note: hFov and vFov are in degrees.
-  // 
-    Vector3D bottom_left = Vector3D(-tan(radians(hFov) * 0.5), -tan(radians(vFov) * 0.5), -1);
-    Vector3D top_right = Vector3D(tan(radians(hFov) * 0.5), tan(radians(vFov) * 0.5), -1);
-    double c_x = bottom_left.x + (top_right.x - bottom_left.x) * x;
-    double c_y = bottom_left.y + (top_right.y - bottom_left.y) * y;
-    double c_z = -1.0;
-    Vector3D d = c2w * Vector3D(c_x, c_y, c_z);
-    d.normalize();
-    Vector3D origin = pos;
-    return Ray(origin, d, fClip);
+Ray Camera::generate_ray_for_thin_lens(double x, double y, double rndR, double rndTheta) const {
+
+    // TODO: 4.1
+    // compute position and direction of ray from the input sensor sample coordinate.
+    // Note: use rndR and rndTheta to uniformly sample a unit disk.
+
+    return Ray(Vector3D(), Vector3D());
 }
 
 

@@ -151,14 +151,30 @@ private:
 }; // class MirrorBSDF*/
 
 /**
- * Glossy BSDF.
+ * Microfacet BSDF.
  */
 
-class GlossyBSDF : public BSDF {
+class MicrofacetBSDF : public BSDF {
  public:
 
-  GlossyBSDF(const Spectrum& reflectance, float shininess)
-    : reflectance(reflectance), shininess(shininess) { }
+  MicrofacetBSDF(const Spectrum& eta, const Spectrum& k, float alpha)
+    : eta(eta), k(k), alpha(alpha){ }
+
+  double getTheta(const Vector3D& w) {
+      return acos(clamp(w.z, -1.0 + 1e-5, 1.0 - 1e-5));
+  }
+
+  double Lambda (const Vector3D& w) {
+      double theta = getTheta(w);
+      double a = 1.0 / (alpha * tan(theta));
+      return 0.5 * (erf(a) - 1.0 + exp(-a * a) / (a * PI));
+  }
+
+  Spectrum F(const Vector3D& wi);
+
+  double G(const Vector3D& wo, const Vector3D& wi);
+
+  double D(const Vector3D& h);
 
   Spectrum f(const Vector3D& wo, const Vector3D& wi);
   Spectrum sample_f(const Vector3D& wo, Vector3D* wi, float* pdf);
@@ -166,12 +182,11 @@ class GlossyBSDF : public BSDF {
   bool is_delta() const { return false; }
 
 private:
-
-  float shininess;
-  Spectrum reflectance;
-  CosineWeightedHemisphereSampler3D sampler;
-
-}; // class GlossyBSDF
+  Spectrum eta, k;
+  float alpha;
+  UniformGridSampler2D sampler;
+  CosineWeightedHemisphereSampler3D cosineHemisphereSampler;
+}; // class MicrofacetBSDF
 
 /**
  * Refraction BSDF.

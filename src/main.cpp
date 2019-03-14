@@ -10,6 +10,8 @@ typedef uint32_t gid_t;
 typedef uint32_t gid_t;
 
 #include <iostream>
+#include <string>
+
 #ifdef _WIN32
 #include "misc/getopt.h"
 #else
@@ -81,7 +83,7 @@ int main( int argc, char** argv ) {
   bool write_to_file = false;
   size_t w = 0, h = 0, x = -1, y = 0, dx = 0, dy = 0;
   string filename, cam_settings = "";
-  while ( (opt = getopt(argc, argv, "s:l:t:m:e:h:H:f:r:c:a:p:")) != -1 ) {  // for each option...
+  while ( (opt = getopt(argc, argv, "s:l:t:m:e:h:H:f:r:c:a:p:b:d:")) != -1 ) {  // for each option...
     switch ( opt ) {
       case 'f':
           write_to_file = true;
@@ -110,6 +112,12 @@ int main( int argc, char** argv ) {
           break;
       case 'm':
           config.pathtracer_max_ray_depth = atoi(optarg);
+          break;
+      case 'b':
+          config.pathtracer_lensRadius = atof(optarg);
+          break;
+      case 'd':
+          config.pathtracer_focalDistance = atof(optarg);
           break;
       case 'e':
           config.pathtracer_envmap = load_exr(optarg);
@@ -162,7 +170,7 @@ int main( int argc, char** argv ) {
 
     if (w && h)
       app->resize(w, h);
-
+    
     if (cam_settings != "")
       app->load_camera(cam_settings);
 
@@ -186,7 +194,7 @@ int main( int argc, char** argv ) {
 
   if (w && h)
     viewer.resize(w, h);
-    
+
   if (cam_settings != "")
     app->load_camera(cam_settings);
 

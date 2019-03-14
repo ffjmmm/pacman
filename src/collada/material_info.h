@@ -11,7 +11,7 @@ struct MaterialInfo : public Instance {
 
   BSDF* bsdf;
   
-  // Texture* tex; ///< texture
+//   Texture* tex; ///< texture
 
 }; // struct Material
 

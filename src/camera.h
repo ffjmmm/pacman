@@ -87,8 +87,13 @@ class Camera {
    * \param y y-coordinate of the ray sample in the view plane
    */
   Ray generate_ray(double x, double y) const;
+  Ray generate_ray_for_thin_lens(double x, double y, double rndR, double rndTheta) const;
 
- private:
+  // Lens aperture and focal distance for depth of field effects.
+  double lensRadius;
+  double focalDistance;
+
+ protected:
   // Computes pos, screenXDir, screenYDir from target, r, phi, theta.
   void compute_position();
 

@@ -5,6 +5,8 @@
 #include "../image.h"
 #include "scene.h"
 
+#include "CGL/lodepng.h"
+
 namespace CGL { namespace StaticScene {
 
 // An environment light can be thought of as an infinitely big sphere centered
@@ -15,6 +17,7 @@ namespace CGL { namespace StaticScene {
 class EnvironmentLight : public SceneLight {
  public:
   EnvironmentLight(const HDRImageBuffer* envMap);
+  ~EnvironmentLight();
   /**
    * In addition to the work done by sample_dir, this function also has to
    * choose a ray direction to sample along. You should initially use a uniform
@@ -42,8 +45,23 @@ class EnvironmentLight : public SceneLight {
    */
   Spectrum sample_dir(const Ray& r) const;
 
- private:
-  const HDRImageBuffer* envMap;
+private:
+ const HDRImageBuffer* envMap;
+ UniformGridSampler2D sampler_uniform2d;
+ UniformSphereSampler3D sampler_uniform_sphere;
+
+ void init();
+ double* pdf_envmap, *marginal_y, *conds_y;
+
+ Vector2D dir_to_theta_phi(const Vector3D &dir) const;
+ Vector3D theta_phi_to_dir(const Vector2D &theta_phi) const;
+
+ Vector2D theta_phi_to_xy(const Vector2D &theta_phi) const;
+ Vector2D xy_to_theta_phi(const Vector2D &xy) const;
+
+ Spectrum bilerp(const Vector2D& xy) const;
+ void save_probability_debug();
+
 }; // class EnvironmentLight
 
 } // namespace StaticScene

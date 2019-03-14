@@ -8,7 +8,6 @@
 #include "CGL/spectrum.h"
 
 #define PART 5
-
 #define PART_1 (PART >= 1)
 #define PART_2 (PART >= 2)
 #define PART_3 (PART >= 3)

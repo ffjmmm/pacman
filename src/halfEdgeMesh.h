@@ -522,8 +522,6 @@ class Vertex : public HalfedgeElement {
   // TODO : add texcoord support
   // Complex texcoord;  ///< vertex texture coordinate
 
-  Vector2D texcoord;
-
   /**
    * Check if if this vertex is on the boundary of the surface
    * \return true if and only if this vertex is on the boundary
@@ -654,8 +652,7 @@ class HalfedgeMesh {
    * in the list.
    */
   void build(const vector<vector<Index> >& polygons,
-             const vector<Vector3D>& vertexPositions,
-             const vector<Vector2D>& texcoords);
+             const vector<Vector3D>& vertexPositions);
 
   // These methods return the total number of elements of each type.
   Size nHalfedges(void) const {

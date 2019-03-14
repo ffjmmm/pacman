@@ -18,6 +18,8 @@
 #include "work_queue.h"
 #include "intersection.h"
 
+// #include "lenscamera.h"
+
 #include "static_scene/scene.h"
 using CGL::StaticScene::Scene;
 
@@ -28,6 +30,8 @@ using CGL::StaticScene::BVHNode;
 using CGL::StaticScene::BVHAccel;
 
 namespace CGL {
+
+// class LensCamera;
 
 struct WorkItem {
 
@@ -60,15 +64,20 @@ class PathTracer {
    * Default constructor.
    * Creates a new pathtracer instance.
    */
-  PathTracer(size_t ns_aa = 1, 
-             size_t max_ray_depth = 4, size_t ns_area_light = 1,
-             size_t ns_diff = 1, size_t ns_glsy = 1, size_t ns_refr = 1,
+  PathTracer(size_t ns_aa = 1,
+             size_t max_ray_depth = 4,
+             size_t ns_area_light = 1,
+             size_t ns_diff = 1,
+             size_t ns_glsy = 1,
+             size_t ns_refr = 1,
              size_t num_threads = 1,
              size_t samples_per_batch = 32,
              float max_tolerance = 0.05f,
              HDRImageBuffer* envmap = NULL,
              bool direct_hemisphere_sample = false,
-             string filename = "");
+             string filename = "",
+             double lensRadius = 0.25,
+             double focalDistance = 4.7);
 
   /**
    * Destructor.
@@ -132,7 +141,7 @@ class PathTracer {
   void start_raytracing();
 
   void render_to_file(std::string filename, size_t x, size_t y, size_t dx, size_t dy);
-
+  
   void raytrace_cell(ImageBuffer& buffer);
 
   /**
@@ -190,7 +199,7 @@ class PathTracer {
   /**
    * Trace a camera ray given by the pixel coordinate.
    */
-  Spectrum raytrace_pixel(size_t x, size_t y);
+  Spectrum raytrace_pixel(size_t x, size_t y, bool useThinLens);
 
   /**
    * Raytrace a tile of the scene and update the frame buffer. Is run
@@ -226,6 +235,7 @@ class PathTracer {
   State state;          ///< current state
   Scene* scene;         ///< current scene
   Camera* camera;       ///< current camera
+  // LensCamera* camera;       ///< current camera
 
   // Integrator sampling settings //
 
@@ -283,8 +293,14 @@ class PathTracer {
   std::stack<BVHNode*> selectionHistory;  ///< node selection history
   std::vector<LoggedRay> rayLog;          ///< ray tracing log
   bool show_rays;                         ///< show rays from raylog
-  
+
+  ImageBuffer *cell_buffer;
+  bool render_silent;
+
   std::string filename;
+
+  double lensRadius, focalDistance;
+
 };
 
 }  // namespace CGL
