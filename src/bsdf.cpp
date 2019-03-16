@@ -52,23 +52,38 @@ double MicrofacetBSDF::D(const Vector3D& h) {
   // TODO: 2.2
   // Compute Beckmann normal distribution function (NDF) here.
   // You will need the roughness alpha.
-
-  return std::pow(cos_theta(h), 100.0);;
+    double sin_h = sin_theta(h);
+    double cos_h = cos_theta(h);
+    double tan_h = sin_h / cos_h;
+    double numerator = exp(-pow(tan_h, 2) / (alpha * alpha));
+    double denominator = PI * pow(alpha, 2) * pow(cos_h, 4);
+    return numerator / denominator;
+    //return std::pow(cos_theta(h), 100.0);;
 }
 
 Spectrum MicrofacetBSDF::F(const Vector3D& wi) {
   // TODO: 2.3
   // Compute Fresnel term for reflection on dielectric-conductor interface.
   // You will need both eta and etaK, both of which are Spectrum.
-
-  return Spectrum();
+    
+    double cos_w = cos_theta(wi);
+    Spectrum Rs = ((eta * eta + k * k) - 2 * eta * cos_w + pow(cos_w, 2)) / ((eta * eta + k * k) + 2 * eta * cos_w + pow(cos_w, 2));
+    Spectrum Rp = ((eta * eta + k * k) * pow(cos_w, 2) - 2 * eta * cos_w + 1) / ((eta * eta + k * k) * pow(cos_w, 2) + 2 * eta * cos_w + 1);
+    return (Rs + Rp) / 2.0;
+    // return Spectrum();
 }
 
 Spectrum MicrofacetBSDF::f(const Vector3D& wo, const Vector3D& wi) {
   // TODO: 2.1
   // Implement microfacet model here
-
-  return Spectrum();
+    Vector3D n(0, 0, 1);
+    if ((dot(wi, n) > 0) && (dot(wo, n) > 0)) {
+        Vector3D h = wo + wi;
+        h.normalize();
+        return F(wi) * G(wo, wi) * D(h) / (4 * dot(n, wo) * dot(n, wi));
+    }
+    else
+        return Spectrum();
 }
 
 Spectrum MicrofacetBSDF::sample_f(const Vector3D& wo, Vector3D* wi, float* pdf) {
@@ -76,8 +91,21 @@ Spectrum MicrofacetBSDF::sample_f(const Vector3D& wo, Vector3D* wi, float* pdf) 
   // *Importance* sample Beckmann normal distribution function (NDF) here.
   // Note: You should fill in the sampled direction *wi and the corresponding *pdf,
   //       and return the sampled BRDF value.
-
-  return Spectrum();
+    Vector2D r = sampler.get_sample();
+    float theta = atan(-pow(alpha, 2) * log(1.0 - r[0]));
+    float phi = 2 * PI * r[1];
+    float p_theta = ((2 * sin(theta)) / (pow(alpha, 2) * pow(cos(theta), 3))) * exp(-pow(tan(theta), 2) / pow(alpha, 2));
+    float p_phi = 1.0 / (2 * PI);
+    float p_h = p_theta * p_phi / sin(theta);
+    
+    float h_x = sin(theta) * cos(phi);
+    float h_y = sin(theta) * sin(phi);
+    float h_z = cos(theta);
+    Vector3D h(h_x, h_y, h_z);
+    *wi = -wo + 2 * dot(wo, h) * h;
+    *pdf = p_h / (4 * dot(*wi, h));
+    return f(wo, *wi);
+    // return Spectrum();
 }
 
 // Refraction BSDF //
